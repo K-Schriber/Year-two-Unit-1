@@ -1,1 +1,51 @@
+# intro.py
+# today we will work on easy programing
+"""
+today we will yse input output and functions
+aug 23
+"""
+
+my_name = "Keeler Schriber" #this is a string
+my_email = '2025.keeler.reed.schriber@uwcisak.jp'
+is_student = True #this is a boolean True:1 or False: 0
+my_age = 17
+my_height = 170.4 #this is a float
+
+#show messages with
+print(my_name)
+print(my_email, my_age, end="")
+print(my_height)
+
+#f string
+print("Welcome ", my_name, "your email is ", my_email)
+print(f"Welcome {my_name}, your email is {my_email}")
+
+#input
+position = input("please enter your position")
+salary = int( input("Please enter your Salary JPY"))
+
+print(f"your position is {position} and salary  is {salary}")
+
+
+first_name = input("please enter your first name").title()
+last_name = input("please enter your last name").title()
+#validatating correct inputs from user
+
+while True:
+    year = input("please enter the year you will graduate ISAK")
+    if year.isdigit() == True:
+        year = int(year)
+        break
+new_email = f"{year}.{first_name}.{last_name}@UWCISAK.jp"
+print(new_email)
+
+
+unkown_email = input("please entre your email")
+if "@uwcisak.jp" in unkown_email:
+    print("welcome to ISAK")
+else:
+    print("email not valid bro")
+
+
+
 
