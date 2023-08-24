@@ -1,3 +1,5 @@
+```.py
+
 # intro.py
 # today we will work on easy programing
 """
@@ -46,6 +48,6 @@ if "@uwcisak.jp" in unkown_email:
 else:
     print("email not valid bro")
 
-
+```
 
 
