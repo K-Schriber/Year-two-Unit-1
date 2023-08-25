@@ -1,0 +1,33 @@
+# Aug 24.py
+A = int( input("input number A"))
+B = int( input("input number B"))
+C = int( input("input number C"))
+
+if A > B:
+    if A > C:
+        if B > C:
+            print(f"A{A},B{B},C{C}")
+        else:
+            print(f"A{A},C{C},B{B}")
+    else:
+        print(f"C{C},A{A},B{B}")
+else:
+    if B > C:
+        if A > C:
+            print(f"B{B},A{A},C{C}")
+        else:
+            print(f"B{B},C{C},A{A}")
+    else:
+        print(f"C{C},B{B},A{A}")
+
+money = int( input("input the amount of money you make"))
+if money > 10000:
+    if money > 50000:
+        if money > 100000:
+            print(f"{money * .25} Tax")
+        else:
+            print(f"{money * .15} Tax")
+    else:
+        print(f"{money * .10} Tax")
+else:
+    print(f"{money * .5} Tax")
