@@ -1,3 +1,4 @@
+```.py
 # Aug 24.py
 A = int( input("input number A"))
 B = int( input("input number B"))
@@ -31,3 +32,4 @@ if money > 10000:
         print(f"{money * .10} Tax")
 else:
     print(f"{money * .5} Tax")
+```
