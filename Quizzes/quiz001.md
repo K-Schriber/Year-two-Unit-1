@@ -3,6 +3,7 @@
 
 
 # 1.Flow Diagram
+<img width="562" alt="Screenshot 2023-09-06 at 12 16 04 AM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/13e9253e-6c78-4ea1-826d-81abb7177681">
 
 
 # 2.Solution
