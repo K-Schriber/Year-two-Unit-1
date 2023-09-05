@@ -5,6 +5,8 @@
 
 # 1.Flow Diagram
 
+<img width="512" alt="Screenshot 2023-09-06 at 1 01 33 AM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/c036c802-d302-4855-9991-beb876b6b4eb">
+
 
 # 2.Solution
 <img width="491" alt="Screenshot 2023-09-05 at 11 04 05 PM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/6d8fc505-f689-46d3-a8d9-5cf28e9b3586">
