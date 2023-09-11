@@ -4,6 +4,7 @@
 
 
 # 1.Flow Diagram
+<img width="548" alt="Screenshot 2023-09-11 at 11 38 50 PM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/43b9cf47-d4bb-4de2-9666-491423abff4b">
 
 
 # 2.Solution
