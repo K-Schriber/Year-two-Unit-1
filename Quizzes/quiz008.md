@@ -1,8 +1,9 @@
 #Quiz 008
-
+Quiz missing on Slides
 
 
 # 1.Flow Diagram
+<img width="589" alt="Screenshot 2023-09-11 at 11 48 13 PM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/d432830b-7ffc-4d60-8917-94a6dce61593">
 
 
 # 2.Solution
