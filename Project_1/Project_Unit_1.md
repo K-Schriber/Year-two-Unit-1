@@ -22,7 +22,7 @@ An example of the data stored is
 ## Proposed Solution
 
 Design statement:
-I will to design and make a ———— for a client who is ———. The ——– will about ———— and is constructed using the software ———. It will take  ———- to make and will be evaluated according to the criteria ———.
+I will to design and make a Ethruuen Wallet for a client who is trying to set up an acounnt. The wallet will hold currency and is constructed using the software pyhton. It will take  30 days to make and will be evaluated according to the criteria (please check succes critera 1-6).
 
 ** add a description of your coin and citation **
 
@@ -32,13 +32,14 @@ Justify the tools/structure of your solution
 1. The electronic ledger is a text-based software (Runs in the Terminal).
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
 3. The electronic ledger allows to enter, withdraw and record transactions.
-4.
-5.
-6.
+4. The electronic ledger takes current rates daily.
+5. Login and logout of Account
+6. Advising on when to buy or sell
 
 # Criteria B: Design
 
 ## System Diagram
+[Comp.pdf](https://github.com/K-Schriber/Unit-1-Comp-Sci/files/12597466/Comp.pdf)
 
 ## Flow Diagrams
 
