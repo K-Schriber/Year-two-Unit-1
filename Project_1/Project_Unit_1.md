@@ -39,7 +39,8 @@ Justify the tools/structure of your solution
 # Criteria B: Design
 
 ## System Diagram
-[Comp.pdf](https://github.com/K-Schriber/Unit-1-Comp-Sci/files/12597466/Comp.pdf)
+<img width="685" alt="Screenshot 2023-09-13 at 10 00 03 PM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/c2137c19-42c7-4245-9416-c3aede75a3b5">
+
 
 ## Flow Diagrams
 
