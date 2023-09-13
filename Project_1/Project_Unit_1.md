@@ -34,7 +34,7 @@ Justify the tools/structure of your solution
 3. The electronic ledger allows to enter, withdraw and record transactions.
 4. The electronic ledger takes current rates daily.
 5. Login and logout of Account
-6. Advising on when to buy or sell
+6. Advising on when to buy or sell and graphs past rates rise/fall
 
 # Criteria B: Design
 
