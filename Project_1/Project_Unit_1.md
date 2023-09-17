@@ -33,8 +33,8 @@ Justify the tools/structure of your solution
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
 3. The electronic ledger allows to enter, withdraw and record transactions.
 4. Display current rate of coin
-5. Login and logout of Account
-6. Graphs the stock of ethureum  from Yahoo finace
+5. Graphs the stock of ethureum  Librarys that are used (Yahoo finace , Pandas(data manipulation), matplot/sea born (graphing system))
+6. Login and Logout of Account
 
 # Criteria B: Design
 
