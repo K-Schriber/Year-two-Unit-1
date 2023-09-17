@@ -32,7 +32,7 @@ Justify the tools/structure of your solution
 1. The electronic ledger is a text-based software (Runs in the Terminal).
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
 3. The electronic ledger allows to enter, withdraw and record transactions.
-4. Display current rate of coin
+4. Displays current rate of coin
 5. Graphs the stock of ethureum  Librarys that are used (Yahoo finace , Pandas(data manipulation), matplot/sea born (graphing system))
 6. Login and Logout of Account
 
