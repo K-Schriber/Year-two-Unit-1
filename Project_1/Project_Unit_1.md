@@ -54,24 +54,33 @@ Justify the tools/structure of your solution
 
 # Criteria C: Development
 
-## Login System
-My client requires a system to protect the private data. I thought about using a login system to accomplish this requirement using a if condition and the open command to work with a csv file. More description of the code....
+## 1 Login System
+My client requires a system to protect their private data. I thought about using a login system to accomplish this requirement using a if condition and the open command to work with a csv file. More description of the code....
 ```.py
-def simple_login(user:str, password:str)->bool:
-    '''
-    Simple authentication, needs fle user.csv
-    :param user: string
-    :param password: string
-    :return: True/False if user is in database
-    '''
-    with open("user.csv") as file:
-        database = file.readlines()
-    output = False
-    for line in database:
-        line_cleaned = line.strip() #remove \n
-        user_pass = line_cleaned.split(",")
-        if user == user_pass[0] and password == user_pass[1]:
-            output = True
-            break
+def login(name:str, password:str)->bool:
+    with open('user.csv',mode='r') as f:
+        data = f.readlines()
 
-    return output
+    success = False
+    for line in data:
+        uname = line.split(',')[0]
+        upass = line.split(',')[1].strip()#removes \n
+        if uname == name and upass == password:
+            success = True
+            break
+    return success
+
+
+###
+attemps = 3
+in_name = input("Enter your username")
+in_pass = input("Enter your password")
+res = login(name=in_name, password=in_pass)
+while res == False and attemps > 1:
+    in_name = input("[ERROR WRONG USER] Enter your username")
+    in_pass = input("Enter your password")
+    res = login(name=in_name, password=in_pass)
+    attemps -= 1
+if res == False:
+    print("sayonara")
+    exit(1)#1 is code for exit without error
