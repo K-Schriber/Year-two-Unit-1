@@ -1,7 +1,8 @@
 # Crypto Wallet
 
-![](22ROOSE-master768.gif)  
-<sub>Illustration for Glenn Harvey</sub>
+![](![image](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/20874f6a-067a-45b5-b774-6039d671f62f)
+)  
+<sub>Ethereum GIF by ethmemes</sub>
 
 # Criteria A: Planning
 
