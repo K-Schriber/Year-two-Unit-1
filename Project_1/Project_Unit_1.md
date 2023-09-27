@@ -1,6 +1,6 @@
 # Crypto Wallet
 
-![](![image](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/20874f6a-067a-45b5-b774-6039d671f62f)
+![](https://tenor.com/view/ethereum-gif-21354303)
 )  
 <sub>Ethereum GIF by ethmemes</sub>
 
