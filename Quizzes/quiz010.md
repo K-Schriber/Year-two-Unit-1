@@ -7,7 +7,9 @@
 
 
 # 2.Solution
-<img width="541" alt="Screenshot 2023-09-27 at 9 58 18 PM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/6dadfed8-02bc-4a20-9009-f59725e0e44c">
+
+
+<img width="587" alt="Screenshot 2023-09-27 at 10 20 02 PM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/d4368679-65a9-41c6-b0be-2f12ade12f0b">
 
 
 # 3.Proof of work
