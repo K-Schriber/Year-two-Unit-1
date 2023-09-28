@@ -1,6 +1,5 @@
 # Crypto Wallet
-
-https://tenor.com/view/ether-reach-the-ether-ethereum-reach-the-ethereum-vapree-reach-the-ethereum-gif-20835646
+<a href="https://tenor.com/search/ether-gifs">Ether GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
  
 <sub>Ethereum GIF by ethmemes</sub>
 
