@@ -1,7 +1,8 @@
 # Crypto Wallet
 
-![](https://tenor.com/view/ethereum-gif-21354303)
-)  
+![image](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/b99bbb1a-56fc-4c4c-bbd9-a83a923d1356)
+
+ 
 <sub>Ethereum GIF by ethmemes</sub>
 
 # Criteria A: Planning
