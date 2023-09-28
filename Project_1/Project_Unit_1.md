@@ -1,7 +1,6 @@
 # Crypto Wallet
 
-![image](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/b99bbb1a-56fc-4c4c-bbd9-a83a923d1356)
-
+<div class="tenor-gif-embed" data-postid="20835646" data-share-method="host" data-aspect-ratio="0.65" data-width="100%"><a href="https://tenor.com/view/ether-reach-the-ether-ethereum-reach-the-ethereum-vapree-reach-the-ethereum-gif-20835646">Ether Reach The Ether GIF</a>from <a href="https://tenor.com/search/ether-gifs">Ether GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
  
 <sub>Ethereum GIF by ethmemes</sub>
 
