@@ -1,5 +1,7 @@
 # Crypto Wallet
-<a href="https://tenor.com/search/ether-gifs">Ether GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+![Uploading ether-reach-the-ether.gif…]()
+
  
 <sub>Ethereum GIF by ethmemes</sub>
 
