@@ -1,8 +1,8 @@
 # Crypto Wallet
 
-![Uploading ether-reach-the-ether.gif…]()
 
- 
+ ![ether-reach-the-ether](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/91d4c72d-feee-4aec-9861-aa653dfd6424)
+
 <sub>Ethereum GIF by ethmemes</sub>
 
 # Criteria A: Planning
