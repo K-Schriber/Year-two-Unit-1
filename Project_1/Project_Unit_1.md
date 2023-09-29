@@ -36,7 +36,7 @@ Justify the tools/structure of your solution
 3. The electronic ledger allows to enter, withdraw and record transactions.
 4. The elctronic ledger displays current rate of coin
 5. Login and Logout of Account
-6.Graphs the stock of ethureum  Librarys that are used (Yahoo finace , Pandas(data manipulation), matplot/sea born (graphing system))
+6. Converts rate of coin into differant country rate USD CAN JPN
 
 # Criteria B: Design
 
