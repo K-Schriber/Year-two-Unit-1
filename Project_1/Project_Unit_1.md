@@ -57,6 +57,13 @@ Fig 1. System diagram for the program. It shows input devices and output devices
 
 # Criteria C: Development
 
+## Tools / Techniques used
+1. Functions
+2. For/while loops
+3. Input Validation
+4. If statements
+5. Web Scraping
+
 ## 1 Login System
 My client requires a system to protect their private data. I thought about using a login system to accomplish this requirement using a if condition and the open command to work with a csv file. More description of the code....
 ```.py
