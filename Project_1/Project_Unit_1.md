@@ -9,7 +9,7 @@
 
 ## Problem definition
 
-Ms. Sato is a local trader who is interested in the emerging market of cryptocurrencies. She has started to buy and sell electronic currencies, however at the moment she is tracking all his transaction using a ledger in a spreadsheet which is starting to become burdensome and too disorganized. It is also difficult for Ms Sato to find past transactions or important statistics about the currency. Ms Sato is in need of a digital ledger that helps her track the amount of the cryptocurrency, the transactions, along with useful statistics. Ms. Sato is interested in the cryptocurrency Ether and wishes to use it as her main cryptocurrency in the digital wallet. Ethereum (ETH) is a decentralized blockchain network powered by the Ether token. It enables users to transact, earn interest on their holdings through staking, use and store nonfungible tokens (NFTs), and trade cryptocurrencies. [1] Ethereum is a global platform that uses a digital ledger through multiple computers to maintain a secure and decentralized record of transactions.[2] The growth of Ethereum is expected to continue due to its widespread adoption as a platform with ongoing technological advancements, increased institutional interest, and a growing ecosystem of innovative projects; Ethereum's value is likely to rise because of its central role in the evolving landscape of decentralized finance and digital assets.[3]
+Ms. Sato is a local trader who is interested in the emerging market of cryptocurrencies. She has started to buy and sell electronic currencies, however at the moment she is tracking all his transaction using a ledger in a spreadsheet which is starting to become burdensome and too disorganized. It is also difficult for Ms Sato to find past transactions or important statistics about the currency. Ms Sato is in need of a digital ledger that helps her track the amount of the cryptocurrency, the transactions, along with useful statistics. 
 
 Apart for this requirements, Ms Sato is open to explore a cryptocurrency selected by the developer.
 
@@ -26,7 +26,7 @@ An example of the data stored is
 Design statement:
 I will to design and make a Ethruuen Wallet for a client who is trying to set up an acounnt. The wallet will hold currency and is constructed using the software pyhton. It will take  30 days to make and will be evaluated according to the criteria (please check succes critera 1-6).
 
-** add a description of your coin and citation **
+** Ethereum (ETH) is a decentralized blockchain network powered by the Ether token. It enables users to transact, earn interest on their holdings through staking, use and store nonfungible tokens (NFTs), and trade cryptocurrencies. [1] Ethereum is a global platform that uses a digital ledger through multiple computers to maintain a secure and decentralized record of transactions.[2] The growth of Ethereum is expected to continue due to its widespread adoption as a platform with ongoing technological advancements, increased institutional interest, and a growing ecosystem of innovative projects; Ethereum's value is likely to rise because of its central role in the evolving landscape of decentralized finance and digital assets.[3] **
 
 Justify the tools/structure of your solution
 
