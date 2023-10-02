@@ -45,8 +45,11 @@ Justify the tools/structure of your solution
 ![Comp-14](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/94754c10-0cd8-4a11-93dd-248a4752fc79)
 Fig 1. System diagram for the program. It shows input devices and output devices along with the sytem requirments to run the program through Python. Takes data from librarys and utilizes csv files.
 
+
 ## Flow Diagrams
 
+![Comp-15](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/6535d9a4-a283-4fd2-a92b-bc81d511d8ae)
+Fig 2. The flow diagram shows the balance system for the program. It takes lines from Transactions.csv file and takes the sum of both withdrawl and depsoti transcations. Then displays sum with the current date.
 
 ## Record of Tasks
 | Task No | Planned Action        | Planned Outcome                                                                          | Time estimate | Target completion date | Criterion |
