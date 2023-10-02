@@ -48,8 +48,13 @@ Fig 1. System diagram for the program. It shows input devices and output devices
 
 ## Flow Diagrams
 
+Fig 2.
+
 ![Comp-15](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/6535d9a4-a283-4fd2-a92b-bc81d511d8ae)
-Fig 2. The flow diagram shows the balance system for the program. It takes lines from Transactions.csv file and takes the sum of both withdrawl and depsoti transcations. Then displays sum with the current date.
+Fig 3. The flow diagram shows the balance system for the program. It takes lines from Transactions.csv file and takes the sum of both withdrawl and depsoti transcations. Then displays sum with the current date.
+
+![Comp-16](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/155aff9b-a4d7-4389-984c-4eb0de095da5)
+Fig 4. The flow diagram shows the Withdraw and Deposit functions. When the user witdraws or deposits into the Etheruem wallet it records the data in a Transactions.csv file that shows date, amount, and reason for transcation.
 
 ## Record of Tasks
 | Task No | Planned Action        | Planned Outcome                                                                          | Time estimate | Target completion date | Criterion |
