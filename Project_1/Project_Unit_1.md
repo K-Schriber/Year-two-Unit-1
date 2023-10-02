@@ -48,7 +48,8 @@ Fig 1. System diagram for the program. It shows input devices and output devices
 
 ## Flow Diagrams
 
-Fig 2.
+![Comp-17](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/270975f2-a81f-4465-af81-638d68a40253)
+Fig 2. The flow diagram shows how the library Requests takes the HTML code from the website then the library BeautifulSoup takes the HTML code from the library HTML5lib and then BeautifulSoup takes the individual variable that displays our current rate of Etheruem from the website and prints it. User gets a current rate of 1 Ethereum.
 
 ![Comp-15](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/6535d9a4-a283-4fd2-a92b-bc81d511d8ae)
 Fig 3. The flow diagram shows the balance system for the program. It takes lines from Transactions.csv file and takes the sum of both withdrawl and depsoti transcations. Then displays sum with the current date.
