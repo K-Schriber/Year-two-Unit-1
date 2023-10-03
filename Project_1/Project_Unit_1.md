@@ -64,6 +64,17 @@ Fig 4. The flow diagram shows the Withdraw and Deposit functions. When the user 
 | 2       | Create a Login System | To have a way for the user to login to account and logout of account.                    | 30 min        | Sep 14                 | B,C       |
 | 3       | Check With Client     | Client either approves 6 proposed ideas or denies them.                                  | 15 min        | Sep 18                 | A         |
 
+
+
+## Test plan
+| Test No | Type of test      | Area Tested                   | Procedure                                                                                                                                             | Test Outcome                                                           | Time estimate | Target completion date | Criterion |
+|---------|-------------------|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Unit Testing      | Login System                  | 1.Enter username and password 2. If correct enters wallet, if not enter username and password again 2 more chances given                              | Confirm the user can login and have three attempts to login correctly  | 15 min        | Sep 30                 | B         |
+| 2       | Unit Testing      | Withdraw and Deposit Function | 1. User picks one or two (Withdrawal or Deposit) 2. Amount to withdraw/deposit 3.Reason for withdraw/deposit 4. Display that it worked through succes | Confirm the user can deposit/withdraw Ethereum through the wallet      | 10 min        | Sep 30                 | B         |
+| 3       | Unit Testing      | Balance Function              | 1. User picks three to check balance 2. Program adds sum of transcation 3. Prints sum                                                                 | Confirm that the balance is correctly displayed                        | 7 min         | Sep 30                 | B         |
+| 4       | Unit Testing      | Current Rate of ETH           | 1. Request html code for website 2.Parse specfic element in html code 3. Print current rate of ETH                                                    | Confirm that the Rate updates and displays the newest rate             | 20 min        | Sep 30                 | B         |
+| 5       | Usability Testing | User ability                  | 1. Easy display of options for user to pick from 2. User picks option 3.Runs task 4. Continues back to options unless clicks exit number(6)           | Confirm that the system works as a whole                               | 5min          | Sep 30                 | B         |
+
 # Criteria C: Development
 
 ## Tools / Techniques used
