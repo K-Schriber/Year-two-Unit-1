@@ -151,7 +151,7 @@ while True:
 
 
 
-    choice = input("Enter your choice (1/2/3/4/5): ")
+    choice = input("Enter your choice (1/2/3): ")
     if choice == "1":
         amount = float(input("Enter the amount to deposit (ETH)  : "))
         while amount < 0:
@@ -165,11 +165,11 @@ while True:
             f.writelines(line)
         print("Saved")
     if choice == "2":
-        amount = (float(input("Enter the amount to withdraw (USD)  : ")))
+        amount = (float(input("Enter the amount to withdraw (ETH)  : ")))
 
         while amount < 0:
             print("enter again [INVALID NUMBER}")
-            amount = float(input("Enter the amount to deposit (USD)  : "))
+            amount = float(input("Enter the amount to deposit (ETH)  : "))
 
 
         date = datetime.date.today()  # todays date
@@ -193,3 +193,18 @@ while True:
     else:
         print("Invalid choice. Please select a valid option.")
 ```
+This code allows the user to deposit, withdraw, and check the balance of their Ethereum wallet. It uses a little menu system that utilizes a while loop and three if statements to have the user pick which interaction they like. The deposit function allows the user to input the amount of Ether to the sixth decimal place, and if the user enters a negative number, it will ask to enter an accepted value. Once the user enters the amount they would like to deposit, the user can input the reason for the deposit, and it will be saved to the Transactions.csv file with the date, amount, and reason. The withdraw function works along the same lines, allowing the user to withdraw Ether and allocate a reason for the transaction but instead saves with a negative value for the amount withdrawn into the Transactions.csv file. The balance system works by reading each line of the Transaction.csv file and stripping the date and the reason. Then, it calculates the sum of all deposits and withdrawals and prints the sum with the date.
+
+## Current Rate of Ether from the internet
+
+```.py
+from bs4 import BeautifulSoup
+import requests
+url = 'https://coinmarketcap.com/currencies/ethereum/'
+page = requests.get(url)
+soup = BeautifulSoup(page.text, 'html5lib')
+output = soup.find('span', class_ = "sc-16891c57-0 dxubiK base-text")
+print(f"This is the current rate of Ethureum {output.text} USD  ")
+```
+This code scrapes real-time data from the CoinMarketCap website. It uses the BeutifulSoup library to parse the HTML code from the website. The code then uses the specific HTML element to take the current price of Ethereum and print it in the electronic ledger.
+
