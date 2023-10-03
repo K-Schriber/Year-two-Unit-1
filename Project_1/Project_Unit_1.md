@@ -73,8 +73,8 @@ Fig 4. The flow diagram shows the Withdraw and Deposit functions. When the user 
 4. If statements
 5. Web Scraping
 
-## 1 Login System
-My client requires a system to protect their private data. I thought about using a login system to accomplish this requirement using a if condition and the open command to work with a csv file. More description of the code....
+## Login System
+
 ```.py
 def login(name:str, password:str)->bool:
     with open('user.csv',mode='r') as f:
@@ -103,3 +103,93 @@ while res == False and attemps > 1:
 if res == False:
     print("sayonara")
     exit(1)#1 is code for exit without error
+```
+My client required a system to protect their private data. So, I have made a login system that allows the user to log in with an already existing Username and Password. The username and password are then checked with a CSV file that stores all user information. If it's the user's wallet, the Ethereum wallet will open; however, if it is not the user or the user enters the password wrong, it will give the person entering the username and password three chances to enter the correct username and password. The wallet will close if the user doesn’t enter the correct password and username three times.
+
+## Menu System
+
+```.py
+while True:
+    print("\nEthereum Wallet Menu:")
+    print("1. Deposit")
+    print("2. Withdraw")
+    print("3. Check Balance")
+    print("4. Check current rate")
+    print("5. Description of Ethereum")
+    print("6. Quit")
+
+
+    choice = input("Enter your choice (1/2/3/4/5): ")
+    if choice == "1":
+        amount = float(input("Enter the amount to deposit: "))
+    elif choice == "2":
+        amount = float(input("Enter the amount to withdraw: "))
+    elif choice == "3":
+        print('Balance"')
+    elif choice == "4":
+        print('Getting the data from the web"')
+    elif choice == "5":
+        print('Getting the data from the web"')
+    elif choice == "6":
+        print("Exiting the Ethereum wallet.")
+        break
+    else:
+        print("Invalid choice. Please select a valid option.")
+```
+
+This code allows the user to pick what they want to do in the Ethereum wallet. A while loop keeps repeating the options so the user can do multiple transactions without exiting the wallet. If loops allow the user to pick a specific number to get to a certain step, such as withdrawing, describing the coin, or exiting the wallet. 
+
+## Deposit, Withdraw, and Balance
+
+```.py
+import datetime
+while True:
+    print("\nEthereum Wallet Menu:")
+    print("1. Deposit")
+    print("2. Withdraw")
+    print("3. Check Balance")
+
+
+
+    choice = input("Enter your choice (1/2/3/4/5): ")
+    if choice == "1":
+        amount = float(input("Enter the amount to deposit (ETH)  : "))
+        while amount < 0:
+            print("enter again")
+            amount =float(input("Enter the amount to deposit (ETH)  : "))
+
+        date = datetime.date.today()  # todays date
+        category = input("Reason for deposit: ")
+        line = f"{date},{amount},{category}\n"
+        with open('Transactions.csv', mode='a') as f:
+            f.writelines(line)
+        print("Saved")
+    if choice == "2":
+        amount = (float(input("Enter the amount to withdraw (USD)  : ")))
+
+        while amount < 0:
+            print("enter again [INVALID NUMBER}")
+            amount = float(input("Enter the amount to deposit (USD)  : "))
+
+
+        date = datetime.date.today()  # todays date
+        category = input("Reason for withdraw: ")
+        line = f"{date},{-amount},{category}\n"
+        with open('Transactions.csv', mode='a') as f:
+            f.writelines(line)
+        print("Funds Withdrawn")
+
+
+    elif choice == "3":
+        with open('Transactions.csv', mode='r') as f:
+            data = f.readlines()
+        balance = 0
+        for line in data:
+            
+            date, amount, reason = line.strip().split(',')
+            balance += float(amount)
+        msg = f'Your Balance {date} is {balance}'
+        print(msg)
+    else:
+        print("Invalid choice. Please select a valid option.")
+```
