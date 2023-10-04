@@ -62,7 +62,8 @@ Fig 3. The flow diagram shows the balance system for the program. It takes lines
 ![Comp-16](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/155aff9b-a4d7-4389-984c-4eb0de095da5)
 Fig 4. The flow diagram shows the Withdraw and Deposit functions. When the user witdraws or deposits into the Etheruem wallet it records the data in a Transactions.csv file that shows date, amount, and reason for transcation.
 
-## Record of Tasks| Task No | Planned Action                               | Planned Outcome                                                                                                                                                  | Time estimate | Target completion date | Criterion |
+## Record of Tasks
+| Task No | Planned Action                               | Planned Outcome                                                                                                                                                  | Time estimate | Target completion date | Criterion |
 |---------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 | 1       | Create system diagram                        | To have a clear idea of the hardware and software requirements for the proposed solution                                                                         | 10 min        | Sep 24                 | B         |
 | 2       | Create a Login System                        | To have a way for the user to login to account and logout of account.                                                                                            | 30 min        | Sep 14                 | C         |
