@@ -21,15 +21,19 @@ An example of the data stored is
 | Sep 24 2022 | food for house celebration | Food | 0.000001 BTC |
 
 
-## Proposed Solution
 
-Design statement:
+
+## Design statement:
 I will to design and make a Ethruuen Wallet for a client who is trying to set up an acounnt. The wallet will hold currency and is constructed using the software pyhton. It will take  30 days to make and will be evaluated according to the criteria (please check succes critera 1-6).
 
-## Description of Ethereum
-** Ethereum (ETH) is a decentralized blockchain network powered by the Ether token. It enables users to transact, earn interest on their holdings through staking, use and store nonfungible tokens (NFTs), and trade cryptocurrencies. [1] Ethereum is a global platform that uses a digital ledger through multiple computers to maintain a secure and decentralized record of transactions.[2] The growth of Ethereum is expected to continue due to its widespread adoption as a platform with ongoing technological advancements, increased institutional interest, and a growing ecosystem of innovative projects; Ethereum's value is likely to rise because of its central role in the evolving landscape of decentralized finance and digital assets.[3] **
+## Rationale for Proposed Solution
+I chose Python because it’s one of the most user-friendly programming languages that is quickly growing globally. [1] According to Linked In, python is easy to understand because of its simple English syntax that allows the programmer to create programs easily.[2] Python also has access to numerous libraries that allow developers to program more efficiently. These libraries provide an API (application programming interface) which makes it easy for developers to use them with their own software programs.[3] Furthermore, Pythons is versatile language that can be used for web development, software development, scientific computing, data analysis, artificial intelligence, and more.[4] Thats why I believe Python will be able to solve all of my client's problems and let her have a functioning crypto wallet.
 
-Justify the tools/structure of your solution
+
+
+## Description of Ethereum
+** Ethereum (ETH) is a decentralized blockchain network powered by the Ether token. It enables users to transact, earn interest on their holdings through staking, use and store nonfungible tokens (NFTs), and trade cryptocurrencies. [5] Ethereum is a global platform that uses a digital ledger through multiple computers to maintain a secure and decentralized record of transactions.[6] The growth of Ethereum is expected to continue due to its widespread adoption as a platform with ongoing technological advancements, increased institutional interest, and a growing ecosystem of innovative projects; Ethereum's value is likely to rise because of its central role in the evolving landscape of decentralized finance and digital assets.[7] **
+
 
 ## Success Criteria
 1. The electronic ledger is a text-based software (Runs in the Terminal).
@@ -218,7 +222,7 @@ soup = BeautifulSoup(page.text, 'html5lib')
 output = soup.find('span', class_ = "sc-16891c57-0 dxubiK base-text")
 print(f"This is the current rate of Ethureum {output.text} USD  ")
 ```
-This code scrapes real-time data from the CoinMarketCap website. It uses the BeutifulSoup library to parse the HTML code from the website. The code then uses the specific HTML element to take the current price of Ethereum and print it in the electronic ledger.
+This code scrapes real-time data from the CoinMarketCap website [8]. It uses the BeutifulSoup library to parse the HTML code from the website. The code then uses the specific HTML element to take the current price of Ethereum and print it in the electronic ledger.
 
 ## Bar Graph of Deposit/Withdraws
 
@@ -249,6 +253,17 @@ This code graphs the amount of Transactions and Withdraws. It uses the CSV file 
 
 ## Video Proof
 
+
+
+## Sources Cited
+1. What is python used for? A beginner’s guide. Coursera. (n.d.). https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python 
+2. Ahmed, M. (n.d.). Why is python so easy to learn?. LinkedIn. https://www.linkedin.com/pulse/why-python-so-easy-learn-maqsood-ahmed 
+3. GoPract.com. (n.d.). The importance of libraries in Python, Data Science, and the applications they facilitate. GoPract. https://gopract.com/Pages/Importance-of-Libraries-Python-data-science-Applications-They-Facilitate.aspx#:~:text=Python%20libraries%20are%20pre%2Dwritten,data%20analysis%20and%20machine%20learning. 
+4. Worsley, S. (2022, March 7). What is python? - the most versatile programming language. DataCamp. https://www.datacamp.com/blog/all-about-python-the-most-versatile-programming-language 
+5. Tele, C. (n.d.). What is ethereum and how does it work?. Cointelegraph. https://cointelegraph.com/learn/what-is-ethereum-a-beginners-guide-to-eth-cryptocurrency 
+6. Hayes, A. (n.d.). Blockchain facts: What is it, how it works, and how it can be used. Investopedia. https://www.investopedia.com/terms/b/blockchain.asp 
+7. Golubev, S. (n.d.). The expansion of Decentralized Finance (DEFI) on the Ethereum Network. LinkedIn. https://www.linkedin.com/pulse/expansion-decentralized-finance-defi-ethereum-network-sergey-golubev 
+8. CoinMarketCAP. (n.d.). Ethereum Price Today, ETH to USD live price, marketcap and Chart. CoinMarketCap. https://coinmarketcap.com/currencies/ethereum/ 
 
 
 
