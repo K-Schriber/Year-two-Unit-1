@@ -26,6 +26,7 @@ An example of the data stored is
 Design statement:
 I will to design and make a Ethruuen Wallet for a client who is trying to set up an acounnt. The wallet will hold currency and is constructed using the software pyhton. It will take  30 days to make and will be evaluated according to the criteria (please check succes critera 1-6).
 
+## Description of Ethereum
 ** Ethereum (ETH) is a decentralized blockchain network powered by the Ether token. It enables users to transact, earn interest on their holdings through staking, use and store nonfungible tokens (NFTs), and trade cryptocurrencies. [1] Ethereum is a global platform that uses a digital ledger through multiple computers to maintain a secure and decentralized record of transactions.[2] The growth of Ethereum is expected to continue due to its widespread adoption as a platform with ongoing technological advancements, increased institutional interest, and a growing ecosystem of innovative projects; Ethereum's value is likely to rise because of its central role in the evolving landscape of decentralized finance and digital assets.[3] **
 
 Justify the tools/structure of your solution
@@ -36,7 +37,7 @@ Justify the tools/structure of your solution
 3. The electronic ledger allows to enter, withdraw and record transactions.
 4. The elctronic ledger displays current rate of coin
 5. Login and Logout of Account
-6. Converts rate of coin into differant country rate USD CAN JPN
+6. User can Graph Tranactions and Withdraws
 
 # Criteria B: Design
 
@@ -218,4 +219,36 @@ output = soup.find('span', class_ = "sc-16891c57-0 dxubiK base-text")
 print(f"This is the current rate of Ethureum {output.text} USD  ")
 ```
 This code scrapes real-time data from the CoinMarketCap website. It uses the BeutifulSoup library to parse the HTML code from the website. The code then uses the specific HTML element to take the current price of Ethereum and print it in the electronic ledger.
+
+## Bar Graph of Deposit/Withdraws
+
+```.py
+ with open('Transactions.csv', mode='r') as f:
+ data = f.readlines()
+ deposits = 0
+ withdrawals = 0
+ for line in data:
+ date, amount, reason = line.strip().split(",")
+ if int(amount) > 0:
+ deposits += int(amount)
+ else:
+ withdrawals += -1*int(amount)
+ # create a simple graph
+ deposits = deposits // 100
+ withdrawals = withdrawals // 100
+ bar_deposits = "deposits".ljust(20)
+ bar_withdrawals = "withdrawals".ljust(20)
+ for x in range(deposits):
+ bar_deposits += "▥"
+ for x in range(withdrawals):
+ bar_withdrawals += "▥"
+ print(f"{bar_deposits} {deposits}")
+ print(f"{bar_withdrawals} {withdrawals}")
+```
+This code graphs the amount of Transactions and Withdraws. It uses the CSV file and accumulates the total amount of withdraws and deposits. Each deposit and withdrawal amount is divided by 100 for scaling purposes. The code then creates two bar strings deposits and withdraws. Finally, it graphs deposits and amounts along with there total amount.
+
+## Video Proof
+
+
+
 
