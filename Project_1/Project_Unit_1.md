@@ -57,10 +57,11 @@ Fig 1. System diagram for the program. It shows input devices and output devices
 Fig 2. The flow diagram shows how the library Requests takes the HTML code from the website then the library BeautifulSoup takes the HTML code from the library HTML5lib and then BeautifulSoup takes the individual variable that displays our current rate of Etheruem from the website and prints it. User gets a current rate of 1 Ethereum.
 
 ![Comp-15](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/6535d9a4-a283-4fd2-a92b-bc81d511d8ae)
-Fig 3. The flow diagram shows the balance system for the program. It takes lines from Transactions.csv file and takes the sum of both withdrawl and depsoti transcations. Then displays sum with the current date.
+Fig 3. The flow diagram shows the balance system for the program. The program accesses the Transactions.csv file, which serves as a records ledger containing both withdrawal and deposit transactions made by users. The program reads each line of this CSV file, breaking down the information into distinct parts: the date of the transaction, the transaction amount, and the reason behind the transaction. Then calculates the sum of transation amount and prints it.
 
 ![Comp-16](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/155aff9b-a4d7-4389-984c-4eb0de095da5)
-Fig 4. The flow diagram shows the Withdraw and Deposit functions. When the user witdraws or deposits into the Etheruem wallet it records the data in a Transactions.csv file that shows date, amount, and reason for transcation.
+Fig 4. The flow diagram illustrates the Withdraw and Deposit functions within the Ethereum wallet system. When a user initiates a withdrawal or deposit transaction, the system captures essential transaction details such as the date, transaction amount, and the reason for the transaction. These details are then recorded in a designated file named "Transactions.csv." This CSV file serves as a comprehensive ledger, maintaining a chronological record of all user transactions, thereby ensuring a transparent and traceable transaction history.
+
 
 ## Record of Tasks
 | Task No | Planned Action                               | Planned Outcome                                                                                                                                                  | Time estimate | Target completion date | Criterion |
