@@ -136,7 +136,7 @@ if res == False:
     print("sayonara")
     exit(1)#1 is code for exit without error
 ```
-My client required a system to protect their private data. So, I have made a login system that allows the user to log in with an already existing Username and Password. The username and password are then checked with a CSV file that stores all user information. If it's the user's wallet, the Ethereum wallet will open; however, if it is not the user or the user enters the password wrong, it will give the person entering the username and password three chances to enter the correct username and password. The wallet will close if the user doesn’t enter the correct password and username three times.
+My client required a system to protect their private data. So, I have made a login system that allows the user to log in with an already existing Username and Password. The username and password are then checked with a CSV file that stores all user information. If it's the user's wallet, the Ethereum wallet will open; however, if it is not the user or the user enters the password wrong, it will give the person entering the username and password three chances to enter the correct username and password. The wallet will close if the user doesn’t enter the correct password and username three times. The code uses an overaching login that uses a for loop to read the user on the CSV file. The if statment then checks if the enter username and password match what is on the CSV and if it eqauls lets the person into the wallet. If not a while loop is used until the user reaches three attemps before kicking them out of the wallet.
 
 ## Menu System
 
@@ -169,7 +169,7 @@ while True:
         print("Invalid choice. Please select a valid option.")
 ```
 
-This code allows the user to pick what they want to do in the Ethereum wallet. A while loop keeps repeating the options so the user can do multiple transactions without exiting the wallet. If loops allow the user to pick a specific number to get to a certain step, such as withdrawing, describing the coin, or exiting the wallet. 
+This code allows the user to pick what they want to do in the Ethereum wallet. A while loop keeps repeating the options so the user can do multiple transactions without exiting the wallet. If loops allow the user to pick a specific number to get to a certain step, such as withdrawing, describing the coin, or exiting the wallet. Multiple if statments check if the user enters an accepted value if they do a certain function is executed if not the input validation asks the user to input and accepted value.
 
 ## Deposit, Withdraw, and Balance
 
@@ -265,7 +265,7 @@ This code scrapes real-time data from the CoinMarketCap website [8]. It uses the
  print(f"{bar_deposits} {deposits}")
  print(f"{bar_withdrawals} {withdrawals}")
 ```
-This code graphs the amount of Transactions and Withdraws. It uses the CSV file and accumulates the total amount of withdraws and deposits. Each deposit and withdrawal amount is divided by 100 for scaling purposes. The code then creates two bar strings deposits and withdraws. Finally, it graphs deposits and amounts along with there total amount.
+This code graphs the amount of Transactions and Withdraws. It uses the CSV file and accumulates the total amount of withdraws and deposits. Each deposit and withdrawal amount is divided by 100 for scaling purposes. The code then creates two bar strings deposits and withdraws. Finally, it graphs deposits and amounts along with there total amount. Using if statments to caluculate the amount of sqaure for deposits/withdraws will be show
 
 ## Video Proof
 
