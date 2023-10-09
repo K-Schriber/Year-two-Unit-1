@@ -4,7 +4,8 @@
 
 
 # 1.Flow Diagram
-![l](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/e2f3e421-594a-4059-979b-dd69b1770191)
+
+![Comp-19](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/086e63c8-9612-40ea-8a07-00b3e4d8c471)
 
 
 # 2.Solution
