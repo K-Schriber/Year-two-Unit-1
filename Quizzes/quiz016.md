@@ -15,5 +15,5 @@
 <img width="817" alt="Screenshot 2023-10-09 at 5 17 28 PM" src="https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/2e8aaec0-e697-4050-8fa9-5bbab60fabe0">
 
 
-python -m pyflowchart Quizzes/quiz_012.py -o 012.html
+
 
