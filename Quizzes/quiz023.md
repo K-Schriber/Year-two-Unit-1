@@ -8,7 +8,8 @@
 
 
 # 2.Proof of work
-![Uploading Screenshot 2023-11-10 at 1.53.26 PM.png…]()
+
+<img width="638" alt="Screenshot 2023-11-10 at 1 53 26 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/907558ea-dd98-4fc4-ac71-7f4b17f5b98d">
 
 
 # 3. Boolean Circuit 
