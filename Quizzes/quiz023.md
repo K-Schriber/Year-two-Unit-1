@@ -13,3 +13,4 @@
 
 
 # 3. Boolean Circuit 
+<img width="374" alt="Screenshot 2023-11-12 at 9 32 55 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/d59cd501-ac96-4cd0-9aaf-3601a3c9ba6b">
