@@ -11,4 +11,5 @@
 <img width="631" alt="Screenshot 2023-11-10 at 9 27 57 AM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/0f03b4dd-819d-41e4-a7b5-8fe61c440645">
 
 
-# 3. Logice Table 
+# 3. Logic Table 
+<img width="304" alt="Screenshot 2023-11-12 at 9 33 21 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/1efaba77-eb83-4c44-a1b6-540cf7ddf82c">
