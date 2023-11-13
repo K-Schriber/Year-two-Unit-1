@@ -6,8 +6,12 @@
 
 # 1. Solution
 
+<img width="440" alt="Screenshot 2023-11-13 at 9 05 18 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/201c09c4-6181-46eb-9df9-e271ec9cbf8e">
+
 
 # 2.Proof of work
+<img width="604" alt="Screenshot 2023-11-13 at 9 05 25 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/eb593ef1-549d-4be6-a87e-8284b2fbe4b0">
+
 
 
 # 3. Proof
