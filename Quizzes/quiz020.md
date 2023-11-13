@@ -1,6 +1,7 @@
 #Quiz 020
 
-![Uploading Screenshot 2023-11-06 at 4.30.13 PM.png…]()
+<img width="503" alt="Screenshot 2023-11-13 at 8 49 50 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/d1e889ac-e990-43ef-9370-e46b9ad0af6f">
+
 
 
 # 1. Solution
