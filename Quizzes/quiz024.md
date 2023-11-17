@@ -1,4 +1,5 @@
 #Quiz 024
+
 <img width="506" alt="Screenshot 2023-11-18 at 6 19 58 AM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/248e5195-f821-4e57-917b-6105c3d8bfad">
 
 
