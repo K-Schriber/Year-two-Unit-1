@@ -13,4 +13,5 @@
 
 <img width="316" alt="Screenshot 2023-11-18 at 6 20 34 AM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/1e704a94-8063-4a2f-8366-744b8d21f560">
 
-# 3. Boolean Circuit 
+# 3. Conversion 
+![IMG_2994](https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/70b6135a-7af5-4051-b62d-227b6f378fe7)
