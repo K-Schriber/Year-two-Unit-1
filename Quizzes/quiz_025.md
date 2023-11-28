@@ -14,7 +14,5 @@
 
 # 3. RGB to Hex Conversion
 
-
-![IMG_3096](https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/2e1580b6-fe2b-40d5-889d-b98cd5d8e330)
-
+ <img width="677" alt="Screenshot 2023-11-28 at 7 52 51 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/d4a5ff32-244b-410e-8c92-95f8f4d020f7">
 
