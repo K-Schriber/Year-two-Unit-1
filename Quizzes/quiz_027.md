@@ -9,8 +9,9 @@
 <img width="372" alt="Screenshot 2023-11-29 at 8 14 32 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/3839b678-7a3e-4f53-9fa5-44dc05cc7a26">
 
 
-# 3. Boolean Circuit 
+# 3. How many colors can you represent in a 6 bit computer? 
 
 
+<img width="479" alt="Screenshot 2023-11-29 at 8 18 31 PM" src="https://github.com/K-Schriber/Unit-2-Comp-Sci/assets/142757998/929a907a-b111-420d-b354-f093012dea41">
 
 
