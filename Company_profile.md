@@ -1,9 +1,9 @@
 # Frisbeeeeeee
 
+<img width="547" alt="Screenshot 2024-01-14 at 10 13 59 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/1d590041-98de-460c-a3b3-1582b2e54c73">
 
- <div class="tenor-gif-embed" data-postid="16055863" data-share-method="host" data-aspect-ratio="1.31687" data-width="100%"><a href="https://tenor.com/view/frisbee-catch-john-travolta-gif-16055863">Frisbee Catch GIF</a>from <a href="https://tenor.com/search/frisbee-gifs">Frisbee GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-<sub>frisbee GIF by frisbbeee</sub>
+<sub>frisbee pic by AUDLNI</sub>
 
 # Criteria A: Planning
 
