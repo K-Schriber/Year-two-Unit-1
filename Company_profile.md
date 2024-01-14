@@ -1,7 +1,7 @@
 # Crypto Wallet
 
 
- ![ether-reach-the-ether](https://github.com/K-Schriber/Unit-1-Comp-Sci/assets/142757998/91d4c72d-feee-4aec-9861-aa653dfd6424)
+ ![ether-reach-the-ether](https://tenor.com/view/frisbee-catch-john-travolta-gif-16055863)
 
 <sub>Ethereum GIF by ethmemes</sub>
 
