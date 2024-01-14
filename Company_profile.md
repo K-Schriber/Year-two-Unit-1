@@ -1,7 +1,7 @@
 # Frisbeeeeeee
 
 
- !<div class="tenor-gif-embed" data-postid="16055863" data-share-method="host" data-aspect-ratio="1.31687" data-width="100%"><a href="https://tenor.com/view/frisbee-catch-john-travolta-gif-16055863">Frisbee Catch GIF</a>from <a href="https://tenor.com/search/frisbee-gifs">Frisbee GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+ <div class="tenor-gif-embed" data-postid="16055863" data-share-method="host" data-aspect-ratio="1.31687" data-width="100%"><a href="https://tenor.com/view/frisbee-catch-john-travolta-gif-16055863">Frisbee Catch GIF</a>from <a href="https://tenor.com/search/frisbee-gifs">Frisbee GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 <sub>frisbee GIF by frisbbeee</sub>
 
