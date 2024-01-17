@@ -13,7 +13,7 @@
 Mr. Schriber is the owner of a company specializing in unique frisbee designs. As the business has grown, he finds it increasingly challenging to manage the range of frisbees being produced. Currently, he relies on a manual system, using spreadsheets to track the specifications such as shape, weight, size, color, and volume for each frisbee. This method has become disorganized, making it difficult for Mr. Schriber to efficiently get information about specific frisbees or analyze important statistics related to their production. In order to maintain operations, Mr. Schriber is seeking a digital template that can effectively record and organize data, providing a system to manage the various attributes of each frisbee in a more structured and accessible manner.
 
 
-An example of what the template could hold is
+An example of what the template could be is
 
 | Date bought | Color | Volume cm^3 | Weight (grams) | Shape  | Size   |
 |-------------|-------|-------------|----------------|--------|--------|
