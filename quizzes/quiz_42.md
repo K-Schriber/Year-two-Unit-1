@@ -18,3 +18,7 @@ Kivy
 <img width="396" alt="Screenshot 2024-01-31 at 8 00 31 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/1afc7290-35cd-421c-9c7a-5e94d15a2fcd">
 
 # 3. UML
+<img width="585" alt="Screenshot 2024-01-31 at 8 11 24 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/c3c670d9-b6aa-4a80-bb19-7008563c5904">
+
+of hehe
+<img width="1082" alt="Screenshot 2024-01-31 at 8 11 42 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/dd9d5196-6168-4a4b-9b76-f74bccd2c56e">
