@@ -4,7 +4,7 @@
 
 <img width="375" alt="Screenshot 2024-02-17 at 5 57 55 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/5411a209-3ea7-4eec-aa75-ba0f80c16096">
 
-If we look through the withdraws vs deposits and take away the desposits minus the withdraws we're left with the balance checking the balance with the balance registered in the table. We see that user 12 has to much money. 5200 - 600 = 4800
+
 
 
 
