@@ -1,17 +1,22 @@
-#Quiz 044
+#Quiz 045
+
+<img width="1108" alt="Screenshot 2024-02-17 at 7 30 15 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/fea2ed94-1ad6-485b-9fed-2bd7d271f57e">
+
 
 # 1. Solution
 
-<img width="375" alt="Screenshot 2024-02-17 at 5 57 55 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/5411a209-3ea7-4eec-aa75-ba0f80c16096">
+<img width="751" alt="Screenshot 2024-02-17 at 8 13 14 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f39515c0-7894-49ab-9087-84abc65a1a7c">
 
 
 
+<img width="382" alt="Screenshot 2024-02-17 at 8 13 54 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/9d677c0e-bd5b-4b4d-8ade-18aa0fbfc42d">
 
 
 # 2.Proof of work
+<img width="361" alt="Screenshot 2024-02-17 at 8 13 40 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f606c206-af70-4c80-bc86-cb236818edad">
 
 
-# 3. UML
 
-<img width="452" alt="Screenshot 2024-02-17 at 5 56 42 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/8b97db2d-d591-40cf-8b68-0972d033b5c7">
+
+
 
