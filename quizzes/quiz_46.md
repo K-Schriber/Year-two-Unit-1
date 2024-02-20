@@ -18,6 +18,8 @@
 https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f5aaf042-6114-4614-90a2-51c2734c369f
 
 
+# 3.  ER Diageram
 
+<img width="483" alt="Screenshot 2024-02-20 at 7 54 02 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/58e5fc7d-ad68-4107-ae6f-321e4e4d25ad">
 
 
