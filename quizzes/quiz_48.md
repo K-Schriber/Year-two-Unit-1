@@ -15,3 +15,5 @@
 
 
 # 3.  ER Diageram
+
+<img width="448" alt="Screenshot 2024-02-20 at 10 42 10 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/d7030f23-db39-46b2-9e38-d71c156ff1fa">
