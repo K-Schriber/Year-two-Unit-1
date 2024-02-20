@@ -4,7 +4,8 @@
 
 # 1. Solution
 
-<img width="601" alt="Screenshot 2024-02-20 at 9 57 41 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/4f3c60e6-b87b-48cc-8bb6-9d6042ce9287">
+<img width="599" alt="Screenshot 2024-02-20 at 10 04 55 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/c9c36f38-4e2e-4049-b3f8-56aba601feda">
+
 
 # 2.Proof of work
 
