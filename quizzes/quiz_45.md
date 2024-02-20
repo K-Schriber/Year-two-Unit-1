@@ -16,6 +16,11 @@
 <img width="361" alt="Screenshot 2024-02-17 at 8 13 40 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f606c206-af70-4c80-bc86-cb236818edad">
 
 
+# 3.  ER Diageram
+
+<img width="596" alt="Screenshot 2024-02-20 at 7 53 39 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/b993c284-8581-4eaf-8bd5-a7163c858162">
+
+
 
 
 
