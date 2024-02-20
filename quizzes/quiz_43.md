@@ -32,3 +32,11 @@ How many different jobs are there?
 What are the items owned by the herbalists?
 
 <img width="303" alt="Screenshot 2024-02-16 at 9 23 16 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/e250dc68-4015-4de7-86d2-b2248b600ee8">
+
+
+
+# 3.  ER Diageram
+
+<img width="687" alt="Screenshot 2024-02-20 at 7 50 57 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/0015da99-b8e4-48ff-ba90-bea9dc254c92">
+
+
