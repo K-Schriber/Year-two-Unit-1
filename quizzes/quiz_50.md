@@ -12,3 +12,4 @@
 
 # 3. ER
 
+<img width="342" alt="Screenshot 2024-02-20 at 10 39 06 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/aa785cbc-9981-416b-9c41-a40175a8429b">
