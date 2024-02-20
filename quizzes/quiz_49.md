@@ -8,6 +8,7 @@
 
 # 2.Proof of work
 
+<img width="1411" alt="Screenshot 2024-02-20 at 10 00 34 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/2d250262-f0b4-40ec-bb81-912ba79fac9b">
 
 # 3. ER
 
