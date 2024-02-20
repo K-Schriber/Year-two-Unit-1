@@ -11,3 +11,6 @@
 
 <img width="425" alt="Screenshot 2024-02-18 at 11 48 45 AM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/4b5bbae6-0d17-43c3-b19d-9cf00c229942">
 
+# 3. ER
+
+<img width="448" alt="Screenshot 2024-02-20 at 10 42 10 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/966e6065-bee8-4d7c-98d1-9885f7cfc917">
