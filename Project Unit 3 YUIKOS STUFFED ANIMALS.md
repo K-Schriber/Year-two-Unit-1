@@ -1,8 +1,9 @@
 
 # Criteria A-Planning 
 ### Definition of the Problem
-UWC ISAK Japan is a school that always strives to be more environmentally friendly, but due to high demand for copies of ISAK INSIDER articles every week, a lot of paper is being used to print them. This especially bothered Jonathan Wang Ye, who is considered by many, number one environmentalist at ISAK, probably even Japan. He is in urgent need for an UWC ISAK journalism club application which would store articles that ISAK INSIDER publishes every week in addition to storing articles from past weeks. He also demands the highest level of security due to the fact that this would be an official school app, so all the passwords must be encrypted, protecting data of app's users. Other than being more green, additional benefit of this app would be that it would nake articles available anywhere in the world, allowing fans and alumni of the school outside ISAK to enjoy it.
-This way everyone would be able to enjoy ISAK INSIDER without hurting the environment by wasting paper in the process.
+
+Yuikos Stuffed Animal Incorporated has been selling stuffed animals for six months. Yuiko’s stuffed animals are family-friendly toys that bring happiness to the whole family. Over the past few weeks Yuiko has reportedly been offered many lucrative deals to sell her company, but opted instead to continue the business on her own. As the business has grown, Yuiko herself has found it difficult to manage orders. And is in urgent need of an application to manage raw materials, track transactions, and create stuffed animals if sufficient resources are there. Yuiko wants the application to be password-protected and encrypted so no trade secrets are leaked. Yuiko has also demanded that the application graph the influx of raw resources in and out of the company.
+
 
 
 ### Success criteria
