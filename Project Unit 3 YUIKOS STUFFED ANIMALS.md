@@ -23,11 +23,13 @@ I will design an aplication for Jonathan Wang Ye, UWC ISAK student. This will be
 ---
 
 ### Rationale for proposed solution
-For the development of this project, I will use Python programming language, KivyMD library for the user interface, and SQL for the databases used in the application.
+For this project, I will use the Python programming language, KivyMD library for the graphic user interface, and SQL lite for databases to store the information.
 
-Considering the client's requests, I will design and develop this easy-to-use centralized application for managing UWC ISAK's journalism club articles. It will be developed using Python programming language, KivyMD library for the user interface, and SQL for the databases used in the application.
+
+Based on the client’s request, I will be working on designing and developing an application can easily mangage Yuikos Stuffed Animals incorporate. The application will run on the programing language Python, KivyMD library for the user interface, and SQL Lite for the databases of the application.
+
 #### Why Python?
-**Python** Python versatility allows a great cross platform development[^1] which is a neccesity for the application I will be developing. Python has a large and active community of users and developers. [^2] Python has a simple, intuitive syntax that makes it easy for new developers to adapt to code and efficiently continue develpment[^3]. 
+Python has over 8.2 million Python developers[^1]. Meaning Python is an active community that offers a lof of support for projects. Python is an effective choice for many kinds of development projects[^2]. A wide range of resources and libraries to create the perfect program. Python has a simple syntax that allows users to understand and develop code more easily[^3].
 #### Why KivyMD?
 One of the main advantages of using **KivyMD** is that it allows developers to build applications that can run on multiple platforms, including Android, iOS, and Windows. This makes it an ideal choice when targeting wide & international audiance like ISAK's journalism club application would.It is also very suitable for co-developing due to small number of variables used allowing easy interpretation and allowing easy extensibility of the application. This can help to save time and effort, allowing developers to focus on creating their app's functionality and features[^4].
 When compared to another UI creating software such as Flutter, KivyMD has more advantage on some components like more supportive online community, user-friendliness but most importantly KivyMD is better as it can work with python coding language while Flutter cannot which therefore is more suitable in this project.[^5]
