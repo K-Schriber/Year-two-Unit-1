@@ -31,11 +31,11 @@ Based on the client’s request, I will be working on designing and developing a
 #### Why Python?
 Python has over 8.2 million Python developers[^1]. Meaning Python is an active community that offers a lof of support for projects. Python is an effective choice for many kinds of development projects[^2]. A wide range of resources and libraries to create the perfect program. Python has a simple syntax that allows users to understand and develop code more easily[^3].
 
-####Why KivyMD?
+#### Why KivyMD?
 Kivy MD offers users access to an extensive collection of Material design compliant widgets[^4], such as sliders, buttons, chat boxes, and more. These features allow Yuiko and Co a simple GUI that’s easy to follow. Along with being multitouch application software, KivyMD can be run on multiple platforms such as Android, IOS, Linux, and Windows. This is perfect for Yuiko and CO so staff can access the program from many devices.[^5] Another advantage of using Kivy is it’s completely free, so there is no paying for software. Kivy connects with Python, which is rich in libraries that ease the development process of applications.[^6] With Python having a lot of online support, you can run an application in no time. 
 
 
-####Why SQLite?
+#### Why SQLite?
 SQLite is very flexible, allowing you to work/access multiple databases in one session[^7]. SQLite is also serverless (it doesn’t require a server to request data from) and can run on any operating system. This makes it easy for Yuiko to request data about orders and inventory. SQLite works well as a database engine for sites with medium traffic, up to 100k daily visits[^8]. This is perfect for Yuiko and CO cause as the business grows, she can start adding an online shop.
 
 
