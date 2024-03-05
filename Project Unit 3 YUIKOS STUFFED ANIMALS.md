@@ -1,4 +1,7 @@
 
+<img width="1275" alt="Screenshot 2024-03-05 at 3 41 49 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/ac1e8cfc-eb83-4ac6-9d00-c7292dc09d71"> Image by Dalle- E
+
+
 # Criteria A-Planning 
 ### Definition of the Problem
 
