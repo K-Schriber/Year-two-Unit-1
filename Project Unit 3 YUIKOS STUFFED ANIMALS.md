@@ -72,12 +72,16 @@ www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=Kiv
 <img width="739" alt="Screenshot 2024-03-09 at 7 30 41 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f1ae2cb9-163c-4b89-b5ca-375b711d3ed6">
 
 The system diagram of the Yuikos Stuffed Animal Incorporated application displays the input and output components of the system, along with the various systems used for the project. The input component is the keyboard used to input data into the application. The output components include the computer screen, which displays the application interface and the various systems used for the project. These systems include the programming languages used (Python and KivyMD), the computer details (Processor, version, memory, etc.), the module, and the database. The module refers to the DatabaseWorker class used to interact with the SQLite database, while the database stores all the information related to the application.
+
+
 #### Wireframe Diagram
 
 
 
 
 # Criteria C-Development
+
+
 ## Techniques Used
 OOP paradigm
 KivyMD Library
@@ -86,7 +90,8 @@ SQLite
 functions
 if statements
 ## Computational Thinking
-####Python File Set up
+#### Python File Set up
+
 ‘’’.py
 Import sqlite3
 from kivy.uix.button import Button
@@ -101,10 +106,9 @@ from my_lib import DatabaseWorker
 from my_lib import make_hash
 import datetime
 ‘’’
+
 This code imports the serval libraries needed for the Yuikos Application. The import of SQLite 3 allows us to interact with and change SQLite databases. The Kivymd imports all directly edit the GUI screen of the application, each import has a different function (button, slider, new screen, etc). The use of the library DateTime to track the time and day an order is placed. And the import of the class DatabaseWorker and  
 
-
-## Proposed solution
 
 ### Criteria number 2: The application has a login feature and an account registration. Once the user enters their details, the data is saved to the database and encrypted.
 
