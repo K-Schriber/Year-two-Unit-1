@@ -10,18 +10,16 @@ Yuikos Stuffed Animal Incorporated has been selling stuffed animals for six mont
 
 
 ### Success criteria
- 1. The application contains account registration and login feature using username email and adequate password.
- 2. Differentiates normal readers and editor accounts which would have an option to add articles if their account is authorized as a journalism club member.Viewers can only read. Editors have a feature of adding articles.
- 3. Application will have a feature to add an article and safely store it.
- 4. Option to see image of the article, allowing full expirience of digital newspapers.
- 5. Option to view past articles containing the author, title, and its content.
- 6. Option to select multiple articles and read them one after another, just like in digital newspapers.
- 7. Option to delete articles created by the user logged in.
- 
+1.The application has a feature to track balance and purchases.
+2.The application offers a login feature that is password and username-protected, along with encryption for extra security.
+3.The application allows users to purchase raw materials if there are insufficient materials.
+4.The application tracks the resources bought and used and creates a line graph to track the influx.
+5.The application allows new users to create an account
+
 
 
 ### Design statement
-I will design an aplication for Jonathan Wang Ye, UWC ISAK student. This will be a journalism club application and will serve to display Isak insider articles in digital format. It will be a desktop application, and will be developed in the one month period.
+I will design an aplication for Yuiko Inc, a stuffed animal buisness. This application will serve to display/manage the buisness finacial and orders. It will be a computer application, and will be developed in the one month period.
 
 ---
 
