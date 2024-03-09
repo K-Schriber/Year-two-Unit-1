@@ -121,7 +121,7 @@ Fig. 8 Represent Criteria 2, by showcasing a functional login. The first screen 
 
 
 #### LoginScreen Python code
-'''.py
+```.py
 def try_change_to_third(self):
    password = self.ids.password.text
    username = self.ids.username.text
@@ -133,12 +133,12 @@ def try_change_to_third(self):
        dialog.open()
 
 
-'''
+```
 Fig. 9 
 
 Shows the Python code used for the Login system. Once the user clicks login after entering the user name and password, it runs through the try_change_to_third function. The user input is saved into two variables: username and password, respectively. The database (db) is then searched using an SQL query for the values that the user entered. If the values are located in the database, the system opens and moves to the main screen (third screen). If the username or password is incorrect and is not found in the database, a dialog box pops up, saying that the values entered are wrong. 
 
-
+```.kv
 
 <FirstScreen>:
 
@@ -195,6 +195,7 @@ Fig. 10 Shows the KivyMD code used for the login screen and its functions. The f
 shows Criteria 5, where new users can create an account. The screen has four text fields (1) username, (2) email, (3) password, and (4) confirm password. If any of the text fields are left blank, a popup will appear, telling the user that all fields need to be filled in. Additionally, if the user doesn’t add an ‘@’ to the email address, the system deems it fake and sends an invalid email address pop-up. If all the fields are entered but the password doesn’t match the rewrite password, then the system will prompt an error and not let the user continue. Also, if the user already exists, it will not work. Finally, If all is correct under the requirements listed above, the data of users will be added to the database, and the user will be logged in. 
 
 #### SignupScreen Python code
+
 ```.py
 
 class SecondScreen(MDScreen):
@@ -234,8 +235,9 @@ class SecondScreen(MDScreen):
            dialog = MDDialog(title='Error', text='Passwords do not match.')
            dialog.open()
    pass
-
 ```
+
+
 Fig. 12 shows the Python code used for the application's signup/registration feature. I used if statements to check whether text fields were filled in correctly. First, the function def try_change_to_third saves the user's input into three variables: name: username, email, password, and check password. Then if the user's inputs are nonexistent, require an ‘@’, already exist in the database, or the password doesn’t match, the system blocks the user from creating an account. To check if the user already has an account in the database, I decided to use an SQL query that checks every user if the username and password credentials match. If they do, a prompt will return asking the user to pick a different password/username. If that user doesn’t exist, it will insert the values (name, email, password) into the database and then a fourth value of the hash signature for the name/password is added as well. 
 
 
