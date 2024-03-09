@@ -76,3 +76,239 @@ The system diagram of the Yuikos Stuffed Animal Incorporated application display
 
 
 
+
+# Criteria C-Development
+## Techniques Used
+OOP paradigm
+KivyMD Library
+Relational databases
+SQLite
+functions
+if statements
+## Computational Thinking
+####Python File Set up
+‘’’.py
+Import sqlite3
+from kivy.uix.button import Button
+from kivymd.app import MDApp
+from kivy.core.window import Window
+from kivymd.uix.datatables import MDDataTable
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.screen import MDScreen
+from kivymd.uix.button import MDFlatButton
+from kivy.uix.screenmanager import ScreenManager
+from my_lib import DatabaseWorker
+from my_lib import make_hash
+import datetime
+‘’’
+This code imports the serval libraries needed for the Yuikos Application. The import of SQLite 3 allows us to interact with and change SQLite databases. The Kivymd imports all directly edit the GUI screen of the application, each import has a different function (button, slider, new screen, etc). The use of the library DateTime to track the time and day an order is placed. And the import of the class DatabaseWorker and  
+
+
+## Proposed solution
+
+### Criteria number 2: The application has a login feature and an account registration. Once the user enters their details, the data is saved to the database and encrypted.
+
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/login_screen_proof.gif)
+
+Fig. 8 Represent Criteria 2, by showcasing a functional login. The first screen login shows consist of two text fields (1) username and (2) password. If the user and password match with one in the database the user is logged in. 
+#### LoginScreen Python code
+
+
+
+
+#### LoginScreen Python code
+```.py
+def try_change_to_third(self):
+   password = self.ids.password.text
+   username = self.ids.username.text
+   user = db.search(f"SELECT * From Users WHERE name = '{username}' and password = '{password}'")
+   if user:
+       self.parent.current = 'Third'
+   else:
+       dialog = MDDialog(title='The Username or Password is Incorrect ')
+       dialog.open()
+
+
+```
+Fig. 9 
+
+Shows the Python code used for the Login system. Once the user clicks login after entering the user name and password, it runs through the try_change_to_third function. The user input is saved into two variables: username and password, respectively. The database (db) is then searched using an SQL query for the values that the user entered. If the values are located in the database, the system opens and moves to the main screen (third screen). If the username or password is incorrect and is not found in the database, a dialog box pops up, saying that the values entered are wrong. 
+
+
+
+<FirstScreen>:
+
+
+   MDLabel:
+       text: "LOGIN"
+       halign: "center"
+       valign: "middle"
+       font_size: "50sp"
+       color: "darkblue"
+       pos_hint: {"center_x": 0.5, "center_y": 0.85}
+   MyButton:
+       text: "Register"
+       size_hint: 0.25, 0.2
+       pos_hint: {"right": 0.98, "y": 0.02}
+       radius:[15,15,15,15]
+       on_release:
+           root.try_change_to_second()
+
+
+   MyButton:
+       text: "Login"
+       size_hint: 0.25, 0.2
+       pos_hint: {"right": 0.2, "y": 0.02}
+       radius:[15,15,15,15]
+       on_release:
+           root.try_change_to_third()
+
+
+
+
+
+
+
+
+
+
+   TextInput:
+       id: username
+       hint_text: "Enter Username or Email"
+       size_hint: 0.8, 0.1
+       pos_hint: {"center_x": 0.5, "center_y": 0.6}
+       font_size: "30sp"
+
+
+   TextInput:
+       id: password
+       hint_text: "Enter Password"
+       size_hint: 0.8, 0.1
+       pos_hint: {"center_x": 0.5, "center_y": 0.4}
+       font_size: "30sp"
+
+   ```
+Fig. 10 Shows the KivyMD code used for the login screen and its functions. The function to check the username/password is try_to_change_third after the button is released. The layout of the GUI is very friendly and offers simple clearly labeled buttons to move around the application.  
+
+ 
+![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/registerScreen_proof.gif)
+
+ Fig.11 
+
+shows Criteria 5, where new users can create an account. The screen has four text fields (1) username, (2) email, (3) password, and (4) confirm password. If any of the text fields are left blank, a popup will appear, telling the user that all fields need to be filled in. Additionally, if the user doesn’t add an ‘@’ to the email address, the system deems it fake and sends an invalid email address pop-up. If all the fields are entered but the password doesn’t match the rewrite password, then the system will prompt an error and not let the user continue. Also, if the user already exists, it will not work. Finally, If all is correct under the requirements listed above, the data of users will be added to the database, and the user will be logged in. 
+
+#### SignupScreen Python code
+```.py
+
+class SecondScreen(MDScreen):
+   def go_back_to_first(self):
+       self.manager.current = 'First'
+
+
+   def try_change_to_third(self):
+       username = self.ids.nun.text
+       email = self.ids.ne.text
+       password = self.ids.np.text
+       check_pass = self.ids.pas.text
+
+
+       if not username or not email or not password or not check_pass:
+           dialog = MDDialog(title='Error', text='All fields are required.')
+           dialog.open()
+           return
+
+
+       if '@' not in email:
+           dialog = MDDialog(title='Error', text='Invalid email address.')
+           dialog.open()
+           return
+
+
+       if password == check_pass:
+           user = db.search(f"SELECT * From Users WHERE name = '{username}' and password = '{password}'")
+           if user:
+               dialog = MDDialog(title='That User already exists')
+               dialog.open()
+           else:
+               save_info = f"Insert into Users (name, email, password, encrypt) values ('{username}', '{email}', '{password}', '{make_hash(password)}')"
+               db.run_query(save_info)
+               self.manager.current = "Third"
+       Else: 
+           dialog = MDDialog(title='Error', text='Passwords do not match.')
+           dialog.open()
+   pass
+
+```
+Fig. 12 shows the Python code used for the application's signup/registration feature. I used if statements to check whether text fields were filled in correctly. First, the function def try_change_to_third saves the user's input into three variables: name: username, email, password, and check password. Then if the user's inputs are nonexistent, require an ‘@’, already exist in the database, or the password doesn’t match, the system blocks the user from creating an account. To check if the user already has an account in the database, I decided to use an SQL query that checks every user if the username and password credentials match. If they do, a prompt will return asking the user to pick a different password/username. If that user doesn’t exist, it will insert the values (name, email, password) into the database and then a fourth value of the hash signature for the name/password is added as well. 
+
+
+
+#### SignupScreen KivyMD code
+```.kv                
+<SecondScreen>:
+
+
+   MDLabel:
+       text: "Register"
+       halign: "center"
+       valign: "middle"
+       font_size: "50sp"
+       color: "darkblue"
+       pos_hint: {"center_x": 0.5, "center_y": 0.85}
+   MyButton:
+       text: "Cancel"
+       size_hint: 0.25, 0.15
+       pos_hint: {"right": 0.98, "y": 0.02}
+       radius:[15,15,15,15]
+       on_release: root.go_back_to_first()
+
+
+   TextInput:
+       id: nun
+       hint_text: "Enter Username"
+       size_hint: 0.8, 0.1
+       pos_hint: {"center_x": 0.5, "center_y": 0.7}
+       font_size: "30sp"
+
+
+
+
+   TextInput:
+       id: ne
+       hint_text: "Enter Email"
+       size_hint: 0.8, 0.1
+       pos_hint: {"center_x": 0.5, "center_y": 0.55}
+       font_size: "30sp"
+
+
+   TextInput:
+       id:np
+
+
+       hint_text: "Enter Password"
+       size_hint: 0.8, 0.1  # Adjust size_hint for the second TextInput
+       pos_hint: {"center_x": 0.5, "center_y": 0.4}
+       font_size: "30sp"
+   TextInput:
+       id: pas
+       hint_text: "Confirm Password"
+       size_hint: 0.8, 0.1
+       pos_hint: {"center_x": 0.5, "center_y": 0.25}
+       font_size: "30sp"
+
+
+   MyButton:
+       text: "Register"
+       size_hint: 0.25, 0.2
+       pos_hint: {"right": 0.2, "y": 0.02}
+       radius:[15,15,15,15]
+       on_release:
+
+
+           root.try_change_to_third()
+
+```
+Fig.13 shows the KivyMD code used for the new user registration. It has four textboxes mentioned in Fig 11, a login button to run to check if the textbox entries are valued and a back button if the registration button was accidentally clicked. 
+
+
+
