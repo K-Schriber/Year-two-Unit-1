@@ -169,13 +169,6 @@ Shows the Python code used for the Login system. Once the user clicks login afte
 
 
 
-
-
-
-
-
-
-
    TextInput:
        id: username
        hint_text: "Enter Username or Email"
