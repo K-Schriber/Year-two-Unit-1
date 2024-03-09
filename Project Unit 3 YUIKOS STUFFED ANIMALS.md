@@ -92,7 +92,7 @@ if statements
 ## Computational Thinking
 #### Python File Set up
 
-‘’’.py
+```.py
 Import sqlite3
 from kivy.uix.button import Button
 from kivymd.app import MDApp
@@ -105,7 +105,7 @@ from kivy.uix.screenmanager import ScreenManager
 from my_lib import DatabaseWorker
 from my_lib import make_hash
 import datetime
-‘’’
+```
 
 This code imports the serval libraries needed for the Yuikos Application. The import of SQLite 3 allows us to interact with and change SQLite databases. The Kivymd imports all directly edit the GUI screen of the application, each import has a different function (button, slider, new screen, etc). The use of the library DateTime to track the time and day an order is placed. And the import of the class DatabaseWorker and  
 
