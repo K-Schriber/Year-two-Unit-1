@@ -11,9 +11,13 @@ Yuikos Stuffed Animal Incorporated has been selling stuffed animals for six mont
 
 ### Success criteria
 1.The application has a feature to track balance and purchases.
+
 2.The application offers a login feature that is password and username-protected, along with encryption for extra security.
+
 3.The application allows users to purchase raw materials if there are insufficient materials.
+
 4.The application tracks the resources bought and used and creates a line graph to track the influx.
+
 5.The application allows new users to create an account
 
 
