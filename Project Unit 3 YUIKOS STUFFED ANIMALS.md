@@ -112,7 +112,7 @@ This code imports the serval libraries needed for the Yuikos Application. The im
 
 ### Criteria number 2: The application has a login feature and an account registration. Once the user enters their details, the data is saved to the database and encrypted.
 
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/login_screen_proof.gif)
+
 
 Fig. 8 Represent Criteria 2, by showcasing a functional login. The first screen login shows consist of two text fields (1) username and (2) password. If the user and password match with one in the database the user is logged in. 
 #### LoginScreen Python code
@@ -121,7 +121,7 @@ Fig. 8 Represent Criteria 2, by showcasing a functional login. The first screen 
 
 
 #### LoginScreen Python code
-```.py
+'''.py
 def try_change_to_third(self):
    password = self.ids.password.text
    username = self.ids.username.text
@@ -133,7 +133,7 @@ def try_change_to_third(self):
        dialog.open()
 
 
-```
+'''
 Fig. 9 
 
 Shows the Python code used for the Login system. Once the user clicks login after entering the user name and password, it runs through the try_change_to_third function. The user input is saved into two variables: username and password, respectively. The database (db) is then searched using an SQL query for the values that the user entered. If the values are located in the database, the system opens and moves to the main screen (third screen). If the username or password is incorrect and is not found in the database, a dialog box pops up, saying that the values entered are wrong. 
