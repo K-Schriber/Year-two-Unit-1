@@ -43,22 +43,8 @@ Kivy MD offers users access to an extensive collection of Material design compli
 #### Why SQLite?
 SQLite is very flexible, allowing you to work/access multiple databases in one session[^7]. SQLite is also serverless (it doesn’t require a server to request data from) and can run on any operating system. This makes it easy for Yuiko to request data about orders and inventory. SQLite works well as a database engine for sites with medium traffic, up to 100k daily visits[^8]. This is perfect for Yuiko and CO cause as the business grows, she can start adding an online shop.
 
-
-# Criteria B-Solution Overview
-### Diagrams
-#### System Diagram
-
-<img width="739" alt="Screenshot 2024-03-09 at 7 30 41 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f1ae2cb9-163c-4b89-b5ca-375b711d3ed6">
-
-The system diagram of the Yuikos Stuffed Animal Incorporated application displays the input and output components of the system, along with the various systems used for the project. The input component is the keyboard used to input data into the application. The output components include the computer screen, which displays the application interface and the various systems used for the project. These systems include the programming languages used (Python and KivyMD), the computer details (Processor, version, memory, etc.), the module, and the database. The module refers to the DatabaseWorker class used to interact with the SQLite database, while the database stores all the information related to the application.
-#### Wireframe Diagram
-
-
-
 ### Citations
 [^1]:“Why Is Python so Popular?” Pulumi, PULMI, www.pulumi.com/why-is-python-so-popular/. Accessed 25 Feb. 2024. 
-
-
 
 [^2]:"Why Choose Python." Python.org, Python SoftwareFoundation. https://www.python.org/about/gettingstarted, Accessed 25 Feb. 2023 
 
@@ -77,3 +63,16 @@ www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=Kiv
 [^7]:S, Ravikiran A. “What Is Sqlite? And When to Use It?” Simplilearn.Com, Simplilearn, 16 Feb. 2023, www.simplilearn.com/tutorials/sql-tutorial/what-is-sqlite#:~:text=SQLite%20facilitates%20you%20to%20work,needs%20no%20setup%20or%20administration. Accessed 26 Feb. 2024. 
 
 [^8]:“Appropriate Uses For SQLite.” Appropriate Uses for SQLite, SQLITe, www.sqlite.org/whentouse.html. Accessed 26 Feb. 2024. 
+
+
+# Criteria B-Solution Overview
+### Diagrams
+#### System Diagram
+
+<img width="739" alt="Screenshot 2024-03-09 at 7 30 41 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f1ae2cb9-163c-4b89-b5ca-375b711d3ed6">
+
+The system diagram of the Yuikos Stuffed Animal Incorporated application displays the input and output components of the system, along with the various systems used for the project. The input component is the keyboard used to input data into the application. The output components include the computer screen, which displays the application interface and the various systems used for the project. These systems include the programming languages used (Python and KivyMD), the computer details (Processor, version, memory, etc.), the module, and the database. The module refers to the DatabaseWorker class used to interact with the SQLite database, while the database stores all the information related to the application.
+#### Wireframe Diagram
+
+
+
