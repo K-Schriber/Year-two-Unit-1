@@ -44,8 +44,36 @@ Kivy MD offers users access to an extensive collection of Material design compli
 SQLite is very flexible, allowing you to work/access multiple databases in one session[^7]. SQLite is also serverless (it doesn’t require a server to request data from) and can run on any operating system. This makes it easy for Yuiko to request data about orders and inventory. SQLite works well as a database engine for sites with medium traffic, up to 100k daily visits[^8]. This is perfect for Yuiko and CO cause as the business grows, she can start adding an online shop.
 
 
-# Criteria A-Planning 
+# Criteria B-Solution Overview
 ### Diagrams
 #### System Diagram
 
 <img width="739" alt="Screenshot 2024-03-09 at 7 30 41 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f1ae2cb9-163c-4b89-b5ca-375b711d3ed6">
+
+The system diagram of the Yuikos Stuffed Animal Incorporated application displays the input and output components of the system, along with the various systems used for the project. The input component is the keyboard used to input data into the application. The output components include the computer screen, which displays the application interface and the various systems used for the project. These systems include the programming languages used (Python and KivyMD), the computer details (Processor, version, memory, etc.), the module, and the database. The module refers to the DatabaseWorker class used to interact with the SQLite database, while the database stores all the information related to the application.
+#### Wireframe Diagram
+
+
+
+### Citations
+[^1]:“Why Is Python so Popular?” Pulumi, PULMI, www.pulumi.com/why-is-python-so-popular/. Accessed 25 Feb. 2024. 
+
+
+
+[^2]:"Why Choose Python." Python.org, Python SoftwareFoundation. https://www.python.org/about/gettingstarted, Accessed 25 Feb. 2023 
+
+[^3]:Nyakundi, Hillary. “Why Python Is Good for Beginners – and How to Start Learning It.” freeCodeCamp.Org, 1 Mar. 2023, www.freecodecamp.org/news/why-learn-python-and-how-to-get-started/#:~:text=Compared%20to%20other%20languages%2C%20Python,a%20shorter%20period%20of%20time. Accessed 25 Feb. 2024. 
+
+
+
+[^4]:“Kivy Basics¶.” Kivy, KIVY, kivy.org/doc/stable/guide/basic.html. Accessed 26 Feb. 2024. 
+www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=KivyMD%20is%20built%20on%20the. Accessed 13 Feb. 2023.
+
+
+[^5]:“What Is Kivy?: Need and Importance: Advantages and Disadvantages.” EDUCBA, 3 Apr. 2023, www.educba.com/what-is-kivy/. Accessed 26 Feb. 2024. 
+
+[^6]:Mieczkowski, Oskar. “Python for Mobile App Development in 2023 – Kivy vs. BeeWare.” AI, Monterail Sp. z o. o., 7 June 2023, www.monterail.com/blog/python-for-mobile-app-development. Accessed 26 Feb. 2024. 
+
+[^7]:S, Ravikiran A. “What Is Sqlite? And When to Use It?” Simplilearn.Com, Simplilearn, 16 Feb. 2023, www.simplilearn.com/tutorials/sql-tutorial/what-is-sqlite#:~:text=SQLite%20facilitates%20you%20to%20work,needs%20no%20setup%20or%20administration. Accessed 26 Feb. 2024. 
+
+[^8]:“Appropriate Uses For SQLite.” Appropriate Uses for SQLite, SQLITe, www.sqlite.org/whentouse.html. Accessed 26 Feb. 2024. 
