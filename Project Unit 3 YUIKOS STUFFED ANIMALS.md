@@ -152,6 +152,13 @@ Figure 8: This UML diagram showcases the OOP (object oriented programing) classe
 | 34      | Film final video                                            | Video demonstration of all success criterias operating and functioning within the built application                          | Evaluation         | 1 hours            | March 10        | D         |
 
 ## Test Plan
+| Description                                                | Type                            | Inputs                                                                                                                       | Outputs                                                                                 |
+|------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Test if signup page works                                  | Functional                      | 1. "Register", 2, Yuiko, yuiko@uwcisak.jp, yuoko for password text fields, 3. Press "Submit".                                | If successful should bring to                                                           |
+| Test if login page works                                   | Functional: Integration testing | 1. Enter 2024.oswell.taiga.sakaguchi@uwcisak.jp, Oswell123@4, 2. Press "Login".                                              | Should bring the user to Homescreen                                                     |
+| Testing if adding new item works                           | Functional: Integration testing | 1. Enter 1, 03-02-2023, Ski, 170, 10987, respectively to the fields customer_id, date, item, size, item_id, 2. Press submit. | Should pop up a dialog saying that the item ID: 10987 added to the borrowed items list. |
+| Check if code has good comments, variable and method names | Non-functional: Code review     | N/A                                                                                                                          | The code should contain comments, good variable and method names.                       |
+| Check if table shows the correct data                      | Non-functional: Load testing    | 1. Login, 2. Go to Borrowed Items screen.                                                                                    | The table should have the exact data as in database.                                    |
 
 # Criteria C-Development
 
