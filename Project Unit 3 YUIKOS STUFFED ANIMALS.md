@@ -590,4 +590,11 @@ Fig. 18 shows the Python code used for the application's signup/registration fea
 Fig.19 shows the KivyMD code used for the new user registration. It has four textboxes mentioned in Fig 11, a login button to run to check if the textbox entries are valued and a back button if the registration button was accidentally clicked. 
 
 
+#### Criteria D
+
+https://youtu.be/oy2CWi75LQU
+
+
+
+
 
