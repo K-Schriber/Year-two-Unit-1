@@ -103,6 +103,11 @@ Figure 5: This function checks the username and password inputted by the user to
 
 Figure 7: This is an ER diagram that represents how objects interact with each other in a system [^9]. The Users table contains five collums id(mainKey), name, email, password, and signitature. Each collum has a specfic data type scene above. The second table is a customers table that has five collums, Customer Id(main key), date, name, phone, and ordered inits. The two tables are connect meaning that 1 user can have many customers. The final table is Materials which consists of three collums id(Main Key), material_name, and amount. This table is used to track material usage.
 
+## UML Diagram
+
+![Untitled_Artwork 3](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/8827ffd4-be5c-45b4-afb4-14c6d5831780)
+
+Figure 8: This UML diagram showcases the OOP (object oriented programing) classes and methods used during the development of the application. The diagram shows two primary parent classes, MDApp and MDScreen, which all the other classes inherit from. The arrows on the diagram represent the inheritance of methods and attributes from the parent classes.
 
 
 
