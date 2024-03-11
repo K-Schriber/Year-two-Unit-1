@@ -250,6 +250,57 @@ Fig 9: Shows the drop down table that users are able to add customers into. The 
 fig 10: Shows the python. The users insert values name, phone, and amount into the text boxes then clicks the button. The button then saves all the data into the database utilizing a function from the Database worker called def save. The use of a drop down table to conviently show all orders is perfect for Yuikos buisness. 
 
 
+#### Kivy CODE For drop down table
+```.kv
+ MDLabel:
+        text: "New Record"
+        font_style: "H4"
+        pos_hint:{'center_x':.5, 'top':.3}
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        size_hint: .8, .08
+        pos_hint:{'center_x':.5, 'top':.2}
+
+        MDTextField:
+            id: name
+            hint_text: 'name'
+            size_hint_x: .2
+
+        MDTextField:
+            id: phone
+            hint_text: 'phone'
+            size_hint_x: .2
+
+
+        MDTextField:
+            id: amount
+            filter: 'integer'
+            hint_text: 'Amount'
+            size_hint_x: .2
+
+        MDRaisedButton:
+            test: "save"
+            on_release: root.save()
+    MDLabel:
+        text: "Inventory"
+        halign: "center"
+        valign: "middle"
+        font_size: "70sp"
+        color: "red"
+        pos_hint: {"center_x": 0.5, "center_y": 0.85}
+
+    MyButton:
+        text: "Back"
+        size_hint: 0.25, 0.2
+        pos_hint: {"right": 0.2, "y": 0.02}
+        radius:[15,15,15,15]
+        on_release:
+            root.go_back_to_third()
+```
+Figure 11: Kivy code that shows how the screen is layed out. Most notably the use of 3 text fields for the customers data. And the use of buttons to submit, goback, a take order.
+
+
 ### Criteria number 2: The application has a login feature and an account registration. Once the user enters their details, the data is saved to the database and encrypted.
 
 
@@ -258,7 +309,7 @@ https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/3c71e624-b95d-422
 
 
 
-Fig. 8 Represent Criteria 2, by showcasing a functional login. The first screen login shows consist of two text fields (1) username and (2) password. If the user and password match with one in the database the user is logged in. 
+Fig. 12 Represent Criteria 2, by showcasing a functional login. The first screen login shows consist of two text fields (1) username and (2) password. If the user and password match with one in the database the user is logged in. 
 #### LoginScreen Python code
 
 
@@ -278,7 +329,7 @@ def try_change_to_third(self):
 
 
 ```
-Fig. 9 
+Fig. 13
 
 Shows the Python code used for the Login system. Once the user clicks login after entering the user name and password, it runs through the try_change_to_third function. The user input is saved into two variables: username and password, respectively. The database (db) is then searched using an SQL query for the values that the user entered. If the values are located in the database, the system opens and moves to the main screen (third screen). If the username or password is incorrect and is not found in the database, a dialog box pops up, saying that the values entered are wrong. 
 
@@ -329,15 +380,15 @@ Shows the Python code used for the Login system. Once the user clicks login afte
        font_size: "30sp"
 
    ```
-Fig. 10 Shows the KivyMD code used for the login screen and its functions. The function to check the username/password is try_to_change_third after the button is released. The layout of the GUI is very friendly and offers simple clearly labeled buttons to move around the application.  
+Fig. 14 Shows the KivyMD code used for the login screen and its functions. The function to check the username/password is try_to_change_third after the button is released. The layout of the GUI is very friendly and offers simple clearly labeled buttons to move around the application.  
 
- 
+ Figure 11shows Criteria 5, where new users can create an account. The screen has four text fields (1) username, (2) email, (3) password, and (4) confirm password. If any of the text fields are left blank, a popup will appear, telling the user that all fields need to be filled in. Additionally, if the user doesn’t add an ‘@’ to the email address, the system deems it fake and sends an invalid email address pop-up. If all the fields are entered but the password doesn’t match the rewrite password, then the system will prompt an error and not let the user continue. Also, if the user already exists, it will not work. Finally, If all is correct under the requirements listed above, the data of users will be added to the database, and the user will be logged in. 
 
 
 
- Fig.11 
+ Fig.15 
 
-shows Criteria 5, where new users can create an account. The screen has four text fields (1) username, (2) email, (3) password, and (4) confirm password. If any of the text fields are left blank, a popup will appear, telling the user that all fields need to be filled in. Additionally, if the user doesn’t add an ‘@’ to the email address, the system deems it fake and sends an invalid email address pop-up. If all the fields are entered but the password doesn’t match the rewrite password, then the system will prompt an error and not let the user continue. Also, if the user already exists, it will not work. Finally, If all is correct under the requirements listed above, the data of users will be added to the database, and the user will be logged in. 
+Shows Criteria 3, This the start fp
 
 #### SignupScreen Python code
 
