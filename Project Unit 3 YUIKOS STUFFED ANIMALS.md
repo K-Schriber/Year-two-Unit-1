@@ -69,14 +69,14 @@ www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=Kiv
 
 # Criteria B-Solution Overview
 ### Diagrams
-#### System Diagram
+## System Diagram
 
 <img width="739" alt="Screenshot 2024-03-09 at 7 30 41 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f1ae2cb9-163c-4b89-b5ca-375b711d3ed6">
 
 Figure 2: The system diagram of the Yuikos Stuffed Animal Incorporated application displays the input and output components of the system, along with the various systems used for the project. The input component is the keyboard used to input data into the application. The output components include the computer screen, which displays the application interface and the various systems used for the project. These systems include the programming languages used (Python and KivyMD), the computer details (Processor, version, memory, etc.), the module, and the database. The module refers to the DatabaseWorker class used to interact with the SQLite database, while the database stores all the information related to the application.
 
 
-#### Wireframe Diagram
+## Wireframe Diagram
 
 ![IMG_4379](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/33a4ac6d-e582-41d6-a348-17b4f44aed7a)
 
@@ -84,7 +84,7 @@ Figure 3: The wireframe for the Yuikos Stuffed Animal Incorporated application i
 
 
 
-#### Flow Diagrams
+## Flow Diagrams
 
 <img width="744" alt="Screenshot 2024-03-11 at 3 47 01 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/b5e5e1fb-0dbb-445a-a85c-ee8c9dabc7b1">
 
@@ -96,7 +96,7 @@ Figure 4: This flow diagram describes the process for a method named try_change_
 Figure 5: This function checks the username and password inputted by the user to login. It first retrieves the username and password from the text fields. Then, it creates an SQL query to search the table users from the database. For a value that matches the username and password. If the query returns exactly one result, the function changes to the main screen. However, if the query does not return any results, the function displays an error message that says either the password or username is wrong for security. 
 
 
-#### ER Diagram
+## ER Diagram
 
 ![Untitled_Artwork 2](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/8bb86f33-18d3-4b15-b85a-9a839a300e82)
 
