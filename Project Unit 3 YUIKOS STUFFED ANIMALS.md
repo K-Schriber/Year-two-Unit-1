@@ -169,7 +169,11 @@ Figure 8: This UML diagram showcases the OOP (object oriented programing) classe
 3. Relational databases a collection of information that organizes data in predefined relationships where data is stored in one or more tables [^11]
 4. SQLite a database engine used to create databases.
 5. functions - mini programs that can be called to return a function.
-6. if statements
+6. if statements\
+
+
+
+## Main 
 
 
 #### Python File Set up
