@@ -106,8 +106,9 @@ Figure 4: This flow diagram describes the process for a method named try_change_
 
 Figure 5: This function checks the username and password inputted by the user to login. It first retrieves the username and password from the text fields. Then, it creates an SQL query to search the table users from the database. For a value that matches the username and password. If the query returns exactly one result, the function changes to the main screen. However, if the query does not return any results, the function displays an error message that says either the password or username is wrong for security. 
 
+![Untitled_Artwork 5](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/21b91c2c-258b-4126-92ab-e173f474ea53)
 
-Figure 6:
+Figure 6: This functions saves the Customers data into the database. Using user's entered customer details. The function runs a SQL save query that saves the entered data into the table customers. 
 
 
 ## ER Diagram
