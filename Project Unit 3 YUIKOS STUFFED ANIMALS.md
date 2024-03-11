@@ -101,7 +101,9 @@ Figure 5: This function checks the username and password inputted by the user to
 ![Untitled_Artwork 2](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/8bb86f33-18d3-4b15-b85a-9a839a300e82)
 
 
-Figure 7: This is an ER diagram that represents how objects interact with each other in a system [^9]. 
+Figure 7: This is an ER diagram that represents how objects interact with each other in a system [^9]. The Users table contains five collums id(mainKey), name, email, password, and signitature. Each collum has a specfic data type scene above. The second table is a customers table that has five collums, Customer Id(main key), date, name, phone, and ordered inits. The two tables are connect meaning that 1 user can have many customers. The final table is Materials which consists of three collums id(Main Key), material_name, and amount. This table is used to track material usage.
+
+
 
 
 
