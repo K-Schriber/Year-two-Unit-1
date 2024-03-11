@@ -76,6 +76,9 @@ The system diagram of the Yuikos Stuffed Animal Incorporated application display
 
 #### Wireframe Diagram
 
+![IMG_4379](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/33a4ac6d-e582-41d6-a348-17b4f44aed7a)
+
+The wireframe for the Yuikos Stuffed Animal Incorporated application includes a login screen, registration screen and a main screen with buttons for managing raw materials, tracking transactions, and creating new stuffed animals. Each button would lead to a sub-screen dedicated to that function. Each sub-screen would have a back button to return to the main screen, and the user could log out at any time. 
 
 
 
