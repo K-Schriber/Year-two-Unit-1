@@ -64,6 +64,8 @@ www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=Kiv
 
 [^8]:“Appropriate Uses For SQLite.” Appropriate Uses for SQLite, SQLITe, www.sqlite.org/whentouse.html. Accessed 26 Feb. 2024. 
 
+[^9]: What is an entity relationship diagram (ERD)?. Lucidchart. (n.d.). https://www.lucidchart.com/pages/er-diagrams#:~:text=Make%20an%20ERD-,What%20is%20an%20ER%20diagram%3F,each%20other%20within%20a%20system. 
+
 
 # Criteria B-Solution Overview
 ### Diagrams
@@ -92,6 +94,14 @@ Figure 4: This flow diagram describes the process for a method named try_change_
 
 
 Figure 5: This function checks the username and password inputted by the user to login. It first retrieves the username and password from the text fields. Then, it creates an SQL query to search the table users from the database. For a value that matches the username and password. If the query returns exactly one result, the function changes to the main screen. However, if the query does not return any results, the function displays an error message that says either the password or username is wrong for security. 
+
+
+#### ER Diagram
+
+![Untitled_Artwork 2](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/8bb86f33-18d3-4b15-b85a-9a839a300e82)
+
+
+Figure 7: This is an ER diagram that represents how objects interact with each other in a system [^9]. 
 
 
 
