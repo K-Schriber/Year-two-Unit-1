@@ -43,6 +43,13 @@ Kivy MD offers users access to an extensive collection of Material design compli
 #### Why SQLite?
 SQLite is very flexible, allowing you to work/access multiple databases in one session[^7]. SQLite is also serverless (it doesn’t require a server to request data from) and can run on any operating system. This makes it easy for Yuiko to request data about orders and inventory. SQLite works well as a database engine for sites with medium traffic, up to 100k daily visits[^8]. This is perfect for Yuiko and CO cause as the business grows, she can start adding an online shop.
 
+
+### Clients Conformation 
+
+![Untitled_Artwork 4](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/2851ca66-4121-4c18-a3b7-20ff6b1b4a92)
+
+Figure 1
+
 ### Citations
 [^1]:“Why Is Python so Popular?” Pulumi, PULMI, www.pulumi.com/why-is-python-so-popular/. Accessed 25 Feb. 2024. 
 
