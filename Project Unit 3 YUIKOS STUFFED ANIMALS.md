@@ -189,6 +189,10 @@ This code imports the serval libraries needed for the Yuikos Application. The im
 
 
 
+https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/3c71e624-b95d-4226-a67a-60ef37e4e658
+
+
+
 Fig. 8 Represent Criteria 2, by showcasing a functional login. The first screen login shows consist of two text fields (1) username and (2) password. If the user and password match with one in the database the user is logged in. 
 #### LoginScreen Python code
 
