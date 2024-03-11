@@ -82,11 +82,16 @@ Figure 3: The wireframe for the Yuikos Stuffed Animal Incorporated application i
 
 
 
-#### Flow Diagram
+#### Flow Diagrams
 
 <img width="744" alt="Screenshot 2024-03-11 at 3 47 01 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/b5e5e1fb-0dbb-445a-a85c-ee8c9dabc7b1">
 
 Figure 4: This flow diagram describes the process for a method named try_change_to_third, which is part of the user registration in the Yuikos Application. Initially, the user is prompted to input a username, email, password, and password confirmation. The system then conducts a series of validations: it checks whether all text boxes are filled, if the email contains an '@' symbol, and whether the password and confirm password inputs match. If any of these checks fail, an appropriate error message is displayed. Also, the system verifies if the username already exists in the database. If it does, it shows a User in Database error. If all checks are passed, the user's information is stored, the password is encrypted, and the data is saved to the database. The database is then closed, and the application moves to the main page.
+
+![Untitled_Artwork](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/54f1e2b3-d58b-4b12-94ec-99c659ba6cda)
+
+
+Figure 5: This function checks the username and password inputted by the user to login. It first retrieves the username and password from the text fields. Then, it creates an SQL query to search the table users from the database. For a value that matches the username and password. If the query returns exactly one result, the function changes to the main screen. However, if the query does not return any results, the function displays an error message that says either the password or username is wrong for security. 
 
 
 
