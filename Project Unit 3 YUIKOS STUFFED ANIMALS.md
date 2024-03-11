@@ -163,7 +163,7 @@ Figure 8: This UML diagram showcases the OOP (object oriented programing) classe
 4. SQLite a database engine used to create databases.
 5. functions - mini programs that can be called to return a function.
 6. if statements
-## Computational Thinking
+
 
 #### Python File Set up
 
@@ -183,6 +183,71 @@ import datetime
 ```
 
 This code imports the serval libraries needed for the Yuikos Application. The import of SQLite 3 allows us to interact with and change SQLite databases. The Kivymd imports all directly edit the GUI screen of the application, each import has a different function (button, slider, new screen, etc). The use of the library DateTime to track the time and day an order is placed. And the import of the class DatabaseWorker and  
+
+### Criteria number 1: The application can track balance/purchases
+
+Fig 9: Shows the drop down table that users are able to add customers into. The customers are add by the users and the credintials are pasted into the table. 
+
+#### Drop Down Table Python Code
+
+```.py
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.data_tables = None
+        self.selected_rows = []
+
+#initializes values data tables, rows
+
+    def on_pre_enter(self, *args):
+        columns_names = [('id', 80), ('date', 80), ('name', 70), ('phone', 80), ('amount', 30)]
+# Sets the amount of character for the table
+
+        self.data_tables = MDDataTable(
+            size_hint=(.9, .5),
+            pos_hint={'center_x': .5, 'top': .8},
+            use_pagination=False,
+            check=True,
+            column_data=columns_names
+        )
+# Visual of table where is it located on the screen
+
+        self.data_tables.bind(on_row_press=self.row_pressed)
+        self.data_tables.bind(on_check_press=self.check_box_pressed)
+        self.add_widget(self.data_tables)
+        self.update()
+
+    def update(self):
+        data = db.search(query='SELECT * from customers', multiple=True)
+        self.data_tables.update_row_data( None, data
+        )
+
+    def row_pressed(self, table, row):
+        print(table, row.text)
+
+    def check_box_pressed(self, table, current_row):
+        print(f"record checked {current_row}")
+        # here you could delete or update the record
+
+    def save(self):
+
+        name = self.ids.name.text
+        phone = self.ids.phone.text
+        amount = self.ids.amount.text
+        date = datetime.datetime.now()
+        print(name, phone, amount)
+
+        save_query = f'''Insert Into customers(date,name, phone, amount)
+                      values('{date}','{name}', '{(phone)}', {(amount)})'''
+#this is a function from database worker that save all data into the database 
+        print(save_query)
+        db.run_query(query=save_query)
+        self.update()
+
+    pass
+```
+
+
+fig 10: Shows the python. The users insert values name, phone, and amount into the text boxes then clicks the button. The button then saves all the data into the database utilizing a function from the Database worker called def save. The use of a drop down table to conviently show all orders is perfect for Yuikos buisness. 
 
 
 ### Criteria number 2: The application has a login feature and an account registration. Once the user enters their details, the data is saved to the database and encrypted.
