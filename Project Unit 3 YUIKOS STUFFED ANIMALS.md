@@ -267,7 +267,8 @@ Shows the Python code used for the Login system. Once the user clicks login afte
 Fig. 10 Shows the KivyMD code used for the login screen and its functions. The function to check the username/password is try_to_change_third after the button is released. The layout of the GUI is very friendly and offers simple clearly labeled buttons to move around the application.  
 
  
-![](https://github.com/AleksandarDzudzevic/Project_Unit_3/blob/main/registerScreen_proof.gif)
+
+
 
  Fig.11 
 
