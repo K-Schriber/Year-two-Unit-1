@@ -460,6 +460,9 @@ MDLabel:
 
 Figure 17: The kivy code for this screen utalizes Buttons, and text fields for the users response.
 
+#### SignupScreen
+Check Figure 12 to view GUI of Registration Screen
+
 #### SignupScreen Python code
 
 ```.py
@@ -504,7 +507,7 @@ class SecondScreen(MDScreen):
 ```
 
 
-Fig. 12 shows the Python code used for the application's signup/registration feature. I used if statements to check whether text fields were filled in correctly. First, the function def try_change_to_third saves the user's input into three variables: name: username, email, password, and check password. Then if the user's inputs are nonexistent, require an ‘@’, already exist in the database, or the password doesn’t match, the system blocks the user from creating an account. To check if the user already has an account in the database, I decided to use an SQL query that checks every user if the username and password credentials match. If they do, a prompt will return asking the user to pick a different password/username. If that user doesn’t exist, it will insert the values (name, email, password) into the database and then a fourth value of the hash signature for the name/password is added as well. 
+Fig. 18 shows the Python code used for the application's signup/registration feature. I used if statements to check whether text fields were filled in correctly. First, the function def try_change_to_third saves the user's input into three variables: name: username, email, password, and check password. Then if the user's inputs are nonexistent, require an ‘@’, already exist in the database, or the password doesn’t match, the system blocks the user from creating an account. To check if the user already has an account in the database, I decided to use an SQL query that checks every user if the username and password credentials match. If they do, a prompt will return asking the user to pick a different password/username. If that user doesn’t exist, it will insert the values (name, email, password) into the database and then a fourth value of the hash signature for the name/password is added as well. 
 
 
 
@@ -573,7 +576,7 @@ Fig. 12 shows the Python code used for the application's signup/registration fea
            root.try_change_to_third()
 
 ```
-Fig.13 shows the KivyMD code used for the new user registration. It has four textboxes mentioned in Fig 11, a login button to run to check if the textbox entries are valued and a back button if the registration button was accidentally clicked. 
+Fig.19 shows the KivyMD code used for the new user registration. It has four textboxes mentioned in Fig 11, a login button to run to check if the textbox entries are valued and a back button if the registration button was accidentally clicked. 
 
 
 
