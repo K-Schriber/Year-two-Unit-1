@@ -71,14 +71,22 @@ www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=Kiv
 
 <img width="739" alt="Screenshot 2024-03-09 at 7 30 41 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/f1ae2cb9-163c-4b89-b5ca-375b711d3ed6">
 
-The system diagram of the Yuikos Stuffed Animal Incorporated application displays the input and output components of the system, along with the various systems used for the project. The input component is the keyboard used to input data into the application. The output components include the computer screen, which displays the application interface and the various systems used for the project. These systems include the programming languages used (Python and KivyMD), the computer details (Processor, version, memory, etc.), the module, and the database. The module refers to the DatabaseWorker class used to interact with the SQLite database, while the database stores all the information related to the application.
+Figure 2: The system diagram of the Yuikos Stuffed Animal Incorporated application displays the input and output components of the system, along with the various systems used for the project. The input component is the keyboard used to input data into the application. The output components include the computer screen, which displays the application interface and the various systems used for the project. These systems include the programming languages used (Python and KivyMD), the computer details (Processor, version, memory, etc.), the module, and the database. The module refers to the DatabaseWorker class used to interact with the SQLite database, while the database stores all the information related to the application.
 
 
 #### Wireframe Diagram
 
 ![IMG_4379](https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/33a4ac6d-e582-41d6-a348-17b4f44aed7a)
 
-The wireframe for the Yuikos Stuffed Animal Incorporated application includes a login screen, registration screen and a main screen with buttons for managing raw materials, tracking transactions, and creating new stuffed animals. Each button would lead to a sub-screen dedicated to that function. Each sub-screen would have a back button to return to the main screen, and the user could log out at any time. 
+Figure 3: The wireframe for the Yuikos Stuffed Animal Incorporated application includes a login screen, registration screen and a main screen with buttons for managing raw materials, tracking transactions, and creating new stuffed animals. Each button would lead to a sub-screen dedicated to that function. Each sub-screen would have a back button to return to the main screen, and the user could log out at any time. 
+
+
+
+#### Flow Diagram
+
+<img width="744" alt="Screenshot 2024-03-11 at 3 47 01 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/b5e5e1fb-0dbb-445a-a85c-ee8c9dabc7b1">
+
+Figure 4: This flow diagram describes the process for a method named try_change_to_third, which is part of the user registration in the Yuikos Application. Initially, the user is prompted to input a username, email, password, and password confirmation. The system then conducts a series of validations: it checks whether all text boxes are filled, if the email contains an '@' symbol, and whether the password and confirm password inputs match. If any of these checks fail, an appropriate error message is displayed. Also, the system verifies if the username already exists in the database. If it does, it shows a User in Database error. If all checks are passed, the user's information is stored, the password is encrypted, and the data is saved to the database. The database is then closed, and the application moves to the main page.
 
 
 
