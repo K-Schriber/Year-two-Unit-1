@@ -186,6 +186,10 @@ This code imports the serval libraries needed for the Yuikos Application. The im
 
 ### Criteria number 1: The application can track balance/purchases
 
+
+https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/5f64bc2b-fc95-4f53-bb29-186a6a101411
+
+
 Fig 9: Shows the drop down table that users are able to add customers into. The customers are add by the users and the credintials are pasted into the table. 
 
 #### Drop Down Table Python Code
