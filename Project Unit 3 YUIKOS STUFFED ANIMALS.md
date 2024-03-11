@@ -382,13 +382,79 @@ Shows the Python code used for the Login system. Once the user clicks login afte
    ```
 Fig. 14 Shows the KivyMD code used for the login screen and its functions. The function to check the username/password is try_to_change_third after the button is released. The layout of the GUI is very friendly and offers simple clearly labeled buttons to move around the application.  
 
- Figure 11shows Criteria 5, where new users can create an account. The screen has four text fields (1) username, (2) email, (3) password, and (4) confirm password. If any of the text fields are left blank, a popup will appear, telling the user that all fields need to be filled in. Additionally, if the user doesn’t add an ‘@’ to the email address, the system deems it fake and sends an invalid email address pop-up. If all the fields are entered but the password doesn’t match the rewrite password, then the system will prompt an error and not let the user continue. Also, if the user already exists, it will not work. Finally, If all is correct under the requirements listed above, the data of users will be added to the database, and the user will be logged in. 
 
 
 
- Fig.15 
 
-Shows Criteria 3, This the start fp
+ 
+<img width="794" alt="Screenshot 2024-03-11 at 9 45 25 PM" src="https://github.com/K-Schriber/Unit-3-Comp-Sci/assets/142757998/6bd824b0-8464-4b81-a895-e9345968821c">
+
+
+ Fig.15 Shows Criteria 3, This the start the start of purchasing new materials. The sytem allows users to type in the text box the type of material and the quantity. The program is then supposed to subtract it from the materials in stock.
+
+```.py
+    def purchase_materials(self, material_name, amount):
+        amount = int(amount)
+        cost_per_unit = 30
+        total_cost = cost_per_unit * amount
+
+        company_balance = 40 
+
+        if company_balance >= total_cost:
+            # Update the balance
+            new_balance = company_balance - total_cost
+            # Update the material quantity in the database
+            update_query = f"UPDATE materials SET amount = amount + {amount} WHERE material_name = '{material_name}'"
+            db.run_query(update_query)
+            # Optionally, update the company balance in the database
+          
+            dialog = MDDialog(title='Balance', text=f"Purchase successful. New balance: '{new_balance}'")
+            dialog.open()
+
+        else:
+            print("Insufficient balance to make the purchase.")
+```
+Figure 16 Shows the python code. The function called purchases materials asks the user for the material name and the amount in text boxes. Once they're submitted the system checks the company's balance with the total cost per units. Using an if statement if there isn't enough money for in the company budget then it reports error. However if there is enough the material name is added to the table of material. The use of SQL commands to update query to put new values of material and amount into the database.
+
+```.kv
+MDLabel:
+        text: "Materials"
+        halign: "center"
+        valign: "middle"
+        font_size: "30sp"
+        color: "red"
+        pos_hint: {"center_x": 0.5, "center_y": 0.85}
+
+    MDTextField:
+        id: material_name
+        hint_text: "Material Name"
+        pos_hint: {"center_x": 0.5, "center_y": 0.7}
+        size_hint_x: None
+        width: 200
+
+    MDTextField:
+        id: material_amount
+        hint_text: "Amount"
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        size_hint_x: None
+        width: 200
+        input_filter: 'int'
+
+    MDRaisedButton:
+        text: "Purchase"
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        on_release: root.purchase_materials(material_name.text, material_amount.text)
+
+    MyButton:
+        text: "Back"
+        size_hint: 0.15, 0.15
+        pos_hint: {"right": 0.2, "y": 0.02}
+        radius:[7,7,7,7]
+        on_release:
+            root.go_back_to_third()
+```
+
+Figure 17: The kivy code for this screen utalizes Buttons, and text fields for the users response.
 
 #### SignupScreen Python code
 
