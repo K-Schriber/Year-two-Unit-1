@@ -66,6 +66,10 @@ www.analyticsvidhya.com/blog/2021/06/creating-android-ml-app-kivymd/#:~:text=Kiv
 
 [^9]: What is an entity relationship diagram (ERD)?. Lucidchart. (n.d.). https://www.lucidchart.com/pages/er-diagrams#:~:text=Make%20an%20ERD-,What%20is%20an%20ER%20diagram%3F,each%20other%20within%20a%20system. 
 
+[^10]:Ooad - Object Oriented Paradigm. Tutorialspoint. (n.d.). https://www.tutorialspoint.com/object_oriented_analysis_design/ooad_object_oriented_paradigm.htm 
+
+[^11]:Google. (n.d.). What is a relational database (RDBMS)?  |  google cloud. Google. https://cloud.google.com/learn/what-is-a-relational-database 
+
 
 # Criteria B-Solution Overview
 ### Diagrams
@@ -146,13 +150,14 @@ Figure 8: This UML diagram showcases the OOP (object oriented programing) classe
 
 
 ## Techniques Used
-1. OOP paradigm
-2. KivyMD Library
-3. Relational databases
-4. SQLite
-5. functions
+1. OOP paradigm- programming paradigm based upon objects (having both data and methods) that aims to incorporate the advantages of modularity and reusability.[^10]
+2. KivyMD Library - Library full of easy to use nice looking guis buttons, tables, screens, etcs.
+3. Relational databases a collection of information that organizes data in predefined relationships where data is stored in one or more tables [^11]
+4. SQLite a database engine used to create databases.
+5. functions - mini programs that can be called to return a function.
 6. if statements
 ## Computational Thinking
+
 #### Python File Set up
 
 ```.py
