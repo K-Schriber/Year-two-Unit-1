@@ -146,12 +146,12 @@ Figure 8: This UML diagram showcases the OOP (object oriented programing) classe
 
 
 ## Techniques Used
-OOP paradigm
-KivyMD Library
-Relational databases
-SQLite
-functions
-if statements
+1. OOP paradigm
+2. KivyMD Library
+3. Relational databases
+4. SQLite
+5. functions
+6. if statements
 ## Computational Thinking
 #### Python File Set up
 
