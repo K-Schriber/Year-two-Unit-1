@@ -3,9 +3,6 @@
 
 # 1. Solution
 
+<img width="680" alt="Screenshot 2024-04-01 at 6 57 29 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/e1d0e712-f3d2-4a51-9101-a282d745effe">
 
-# 2.Proof of work
-
-
-# 3. UML
 
