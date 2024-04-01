@@ -4,8 +4,6 @@
 # 1. Solution
 
 
-# 2.Proof of work
+<img width="613" alt="Screenshot 2024-04-01 at 6 52 02 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/0d30aa57-9127-475c-917c-06162bd714aa">
 
-
-# 3. UML
 
