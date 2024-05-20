@@ -1,1 +1,0 @@
-## Criteria C Development
