@@ -4,8 +4,7 @@
 - Flask Library/Routes
 - Python/Javascript inside HTML
 - CSS Styling
-- Object-Oriented Programming(OOP)
-- For loops
+- Object-Oriented Programming(OOP) / SQLITE Databases
 - If statements
 - Variables
 - Functions
