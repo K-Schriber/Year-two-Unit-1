@@ -83,7 +83,8 @@ ul li img {
 To maintain the same visual format within each page of the program the use of a html named base. This HTML file is the shell which all the other pages will be rendered from [^2]. In other words, it provides the same format for the header, depending if you're logged in the header will show login /register or Home/Add Meme/Logout/Profile.
 
 Fig 1: LOGGED IN
-<img width="1147" alt="Screenshot 2024-05-24 at 11 03 48 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/0f95bc84-7c5c-4c54-9648-9961a6e552f5">
+<img width="432" alt="Screenshot 2024-05-25 at 8 09 26 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/51d5dc01-78b5-4470-af81-2a3bd46cd2ad">
+
 
 Fig 2: LOGGED OUT
 <img width="539" alt="Screenshot 2024-05-25 at 8 09 19 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/d90cfff6-689e-49da-9d28-1d9290c163cf">
