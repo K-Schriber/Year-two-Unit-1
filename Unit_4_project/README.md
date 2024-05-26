@@ -2,6 +2,7 @@
 
 ## List of techniques used
 - Flask Library/Routes
+- HTTP - GET and POST requests
 - Python/Django inside HTML
 - CSS Styling
 - SQLITE Databases
@@ -151,8 +152,32 @@ Fig 2: LOGGED OUT
 
 
 ## Succes Criteria 1: The application for the Meme Reddit has a login/register system
-I have created a login/registration system that allows users to each have there own account by loggin in or registering if they don't have an account. The first part of the registration system is the [[register page]]  
+I have created a login/registration system that allows users to each have there own account by loggin in or registering if they don't have an account. 
 
+
+# registration
+The first part of the process of the application is registering. To create the webserver page the url endpoint is called `/register`.  The following `registration` function allows new users to create an account by providing a username and password. When the user clicks submit it stores the user's entered information. This process of appending data to the database is a Post request in which data is saved to the server in this case the SQLLITE database. The program trys to insert the users inputs into the database and if the user already exists is brings up an error [^4]. The SQL query uses ? which is place holder for the values doing this changes the query into a parameterized query [^5]. In this type of query actual values are provided separately from the SQL statement itself this is done to prevent SQL Injections which is a web attack that uses malicious SQL code for backend database manipulation to access information that not intended to be displayed [^5]. Before the username and password are appended to the database the password is hashed for extra security. Hashing involves taking an input `password` and converting it into a fixed-size string of characters using a mathematical function.  
+
+The code for the registration system is below. 
+
+```.py
+@app.route('/register', methods=['GET', 'POST']) # defines the URL end point and the HTTP methods GET and POST
+def register():
+    error = None
+    if request.method == ['POST']: 
+        username = request.form['username'] # User inputs username into text box
+        password = request.form['password'] # User inputs password into text box
+    db = get_db() #connection to database
+    try: # Runs the block of code within and checks to see if there is a repeated user if there is it goes to except block
+        db.execute('INSERT INTO user (username, password) VALUES (?, ?)', # ? place holder values 
+                   (username, generate_password_hash(password))) # Inserts the two values of username/ passowrd into placeholder values database hashing password
+        db.commit()
+        return redirect(url_for('login'))
+    except sqlite3.IntegrityError: # Brings up error and returns prompt to user
+        error = 'Username already taken. Please choose another.'
+    return render_template('register.html', error=error)
+
+```
 
 ```.py
 @app.route('/login', methods=['GET', 'POST'])
@@ -175,5 +200,5 @@ def login():
 [^1]:USING SQLITE WITH FLASK, Pallets, msiz07-flask-docs-ja.readthedocs.io/ja/latest/patterns/sqlite3.html. 
 [^2]:“Styles & CSS.” Docs, docs.astro.build/en/guides/styling/. Accessed 26 May 2024. 
 [^3]:“Template Extending.” Template Extending · HonKit, tutorial.djangogirls.org/en/template_extending/. Accessed 26 May 2024. 
-[^4]
-[^5]
+[^4]: “Try, except, Else, Finally in Python (Exception Handling).” Nkmk Note, note.nkmk.me/en/python-try-except-else-finally/. Accessed 26 May 2024. 
+[^5]:“Protecting Databases with Parameterized Queries.” Blue Goat Cyber, 21 Apr. 2024, bluegoatcyber.com/blog/protecting-databases-with-parameterized-queries/. 
