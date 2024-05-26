@@ -147,15 +147,23 @@ Fig 2: LOGGED OUT
 </html>
 ```
 
+## Session function
+The session function stores information about a user's session across multiple requests. 
+```.py
+@app.route('/')
+def index():
+    if not session.get('user_id'):
+        return redirect(url_for('login'))
+    return redirect(url_for('home'))
+```
 
 
 
-
-## Succes Criteria 1: The application for the Meme Reddit has a login/register system
+# Succes Criteria 1: The application for the Meme Reddit has a login/register system
 I have created a login/registration system that allows users to each have there own account by loggin in or registering if they don't have an account. 
 
 
-# registration
+## Registration
 The first part of the process of the application is registering. To create the webserver page the url endpoint is called `/register`.  The following `registration` function allows new users to create an account by providing a username and password. When the user clicks submit it stores the user's entered information. This process of appending data to the database is a Post request in which data is saved to the server in this case the SQLLITE database. The program trys to insert the users inputs into the database and if the user already exists is brings up an error [^4]. The SQL query uses ? which is place holder for the values doing this changes the query into a parameterized query [^5]. In this type of query actual values are provided separately from the SQL statement itself this is done to prevent SQL Injections which is a web attack that uses malicious SQL code for backend database manipulation to access information that not intended to be displayed [^5]. Before the username and password are appended to the database the password is hashed for extra security. Hashing involves taking an input `password` and converting it into a fixed-size string of characters using a mathematical function.  
 
 The code for the registration system is below. 
@@ -172,13 +180,14 @@ def register():
         db.execute('INSERT INTO user (username, password) VALUES (?, ?)', # ? place holder values 
                    (username, generate_password_hash(password))) # Inserts the two values of username/ passowrd into placeholder values database hashing password
         db.commit()
-        return redirect(url_for('login'))
+        return redirect(url_for('login')) # Redirects user to Url route /Login
     except sqlite3.IntegrityError: # Brings up error and returns prompt to user
         error = 'Username already taken. Please choose another.'
-    return render_template('register.html', error=error)
+    return render_template('register.html', error=error) # If errors returns to register template 
 
 ```
-
+# Login 
+The login system works similary to the registration system except will only allow the user to login if there is an exsisting account. The login page asks the user to input username and password into two text boxes and has a submit button. Once the user clicks the submit button using an if statement if it sends a POST request then the username/password are saved in two variables and the the program connects to the database. The database then does a parameteraidsed query (Query for SQL injection prevention) to see if the username is located in the database. If it is then it checks if the provided password matches the hashed password stored in the database. If both match username/password match in database the users id is put into a session and the fucntion redirects the user to the home page. Else if they don't match the user is returned with an error.
 ```.py
 @app.route('/login', methods=['GET', 'POST'])
 def login():
