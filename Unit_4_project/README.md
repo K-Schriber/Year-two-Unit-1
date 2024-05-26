@@ -87,6 +87,7 @@ Fig 1: LOGGED IN
 
 
 Fig 2: LOGGED OUT
+
 <img width="539" alt="Screenshot 2024-05-25 at 8 09 19 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/d90cfff6-689e-49da-9d28-1d9290c163cf">
 
 
