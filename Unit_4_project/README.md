@@ -11,6 +11,26 @@
 - Lists
 - Token-based authentication
 
+# Memes database
+The memes.database which is ran through the driver SQLlite stores all the information from memes to users information. To intialise my program (python.file) with the database I first need to connect to it. The function below connects to the database [^1] . It ensures that a single connection is used per request to avoid opening multiple connections to the database.
+```.py
+def get_db():
+    db = getattr(g, '_database', None) #defines the db as database, also utalizes an object provided by flask called g to store data during lifetime of request [^1]
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+        db.row_factory = sqlite3.Row
+    return db
+```
+The next function I use is disconect from the database, in which after the database recives a request it closes [^1].
+
+```.py
+
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
+```
+
 # CSS Styling
 CSS styling allows you to have a standard format and presentation for the spacing of images/textboxs/headers/etc. In this project I utalized a premade template [^1]. The CSS visual appearance is below.
 
@@ -128,7 +148,7 @@ Fig 2: LOGGED OUT
 
 
 ## Succes Criteria 1: The application for the Meme Reddit has a login/register system
-Since my users needs an application to manange multiple users . I have created a login system that 
+I have created a login/registration system that allows users to each have there own account by loggin in or registering if they don't have an account. The first part of the registration system is the [register page]  
 
 
 ```.py
@@ -149,5 +169,5 @@ def login():
     return render_template('login.html', error=error)
 ```
 ### Citations
-[^1]:
+[^1]:USING SQLITE WITH FLASK, Pallets, msiz07-flask-docs-ja.readthedocs.io/ja/latest/patterns/sqlite3.html. 
 
