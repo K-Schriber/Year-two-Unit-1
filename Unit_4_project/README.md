@@ -2,17 +2,17 @@
 
 ## List of techniques used
 - Flask Library/Routes
-- Python/Javascript inside HTML
+- Python/Django inside HTML
 - CSS Styling
-- Object-Oriented Programming(OOP) / SQLITE Databases
+- SQLITE Databases
 - If statements
 - Variables
 - Functions
 - Lists
-- Token-based authentication
+- Token-based authentication eerrmmm
 
 # Memes database
-The memes.database which is ran through the driver SQLlite stores all the information from memes to users information. To access/query/add/delete data I first need to connect to my program (python.file) with the database. The function [get_db] below connects to the database [^1] . It ensures that a single connection is used per request to avoid opening multiple connections to the database. 
+The memes.database which is ran through the driver SQLlite stores all the information from memes to users information. To access/query/add/delete data I first need to connect to my program (python.file) with the database. The function `get_db` below connects to the database [^1] . It ensures that a single connection is used per request to avoid opening multiple connections to the database. 
 ```.py
 def get_db():
     db = getattr(g, '_database', None) #defines the db as database, also utalizes an object provided by flask called g to store data during lifetime of request [^1]
@@ -33,7 +33,7 @@ def close_connection(exception):
 The pros of using a function is whenever you need to Query the data base you aren't repetetive with the connection and closing connection code. This also allows me to focus on the more complex and important aspects of the application, such as the user interface and functionality.
 
 # CSS Styling
-CSS styling allows you to have a standard format and presentation for the spacing of images/textboxs/headers/etc. In this project I utalized a premade template [^2]. The CSS visual appearance is below.
+CSS (Cascade Style Sheet) styling allows you to have a standard format and presentation for the spacing of images/textboxs/headers/etc. In this project I utalized a premade template [^2]. 
 
 ```.css
 body {
@@ -100,6 +100,8 @@ ul li img {
     grid-column: 1;
   grid-row: 2 / 5;}
 ```
+
+# Base HTML
 To maintain the same visual format within each page of the program the use of a html named base. This HTML file is the shell which all the other pages will be rendered from [^3]. In other words, it provides the same format for the header, depending if you're logged in the header will show login /register or Home/Add Meme/Logout/Profile.
 
 Fig 1: LOGGED IN
@@ -171,5 +173,7 @@ def login():
 ```
 ### Citations
 [^1]:USING SQLITE WITH FLASK, Pallets, msiz07-flask-docs-ja.readthedocs.io/ja/latest/patterns/sqlite3.html. 
-[^2]
-[^3]
+[^2]“Styles & CSS.” Docs, docs.astro.build/en/guides/styling/. Accessed 26 May 2024. 
+[^3]“Template Extending.” Template Extending · HonKit, tutorial.djangogirls.org/en/template_extending/. Accessed 26 May 2024. 
+[^4]
+[^5]
