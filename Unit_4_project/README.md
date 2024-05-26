@@ -148,14 +148,15 @@ Fig 2: LOGGED OUT
 ```
 
 ## Session function
-The session function stores information about a user's session across multiple requests. In the Flask application, cookies and sessions are closely related that the session data in this case `user_id` is stored in cookies. When you store information in the session object in Flask the data is serialized and placed into a cookie that is sent to the user's browser (Figure 1). This session cookie is then included in all the next HTTP requests. By verifying and deserializing the session cookie, Flask can retrieve the stored session data, ensuring a seamless and consistent user experience throughout their interaction with the application. 
+The session function stores information about a user's session across multiple requests. In the Flask application, cookies and sessions are closely related that the session data in this case `user_id` is stored in cookies. When you store information in the session object in Flask the data is serialized and placed into a cookie that is sent to the user's browser (Figure 1)[^6]. This session cookie is then included in all the next HTTP requests. By verifying the session cookie Flask can retrieve the stored session data. This ensures a secure and consistent user experience throughout the application [^6]. 
 
+The function 
 ```.py
 @app.route('/')
 def index():
-    if not session.get('user_id'):
+    if not session.get('user_id'): # if the session is not user id then redirects for login
         return redirect(url_for('login'))
-    return redirect(url_for('home'))
+    return redirect(url_for('home')) #else it stays on home page
 ```
 
 Figure 1: User Cookie: User_id Cookie = 1
