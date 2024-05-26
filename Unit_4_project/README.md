@@ -173,7 +173,7 @@ def login():
 ```
 ### Citations
 [^1]:USING SQLITE WITH FLASK, Pallets, msiz07-flask-docs-ja.readthedocs.io/ja/latest/patterns/sqlite3.html. 
-[^2]“Styles & CSS.” Docs, docs.astro.build/en/guides/styling/. Accessed 26 May 2024. 
-[^3]“Template Extending.” Template Extending · HonKit, tutorial.djangogirls.org/en/template_extending/. Accessed 26 May 2024. 
+[^2]:“Styles & CSS.” Docs, docs.astro.build/en/guides/styling/. Accessed 26 May 2024. 
+[^3]:“Template Extending.” Template Extending · HonKit, tutorial.djangogirls.org/en/template_extending/. Accessed 26 May 2024. 
 [^4]
 [^5]
