@@ -12,24 +12,25 @@
 - Token-based authentication
 
 # Memes database
-The memes.database which is ran through the driver SQLlite stores all the information from memes to users information. To intialise my program (python.file) with the database I first need to connect to it. The function below connects to the database [^1] . It ensures that a single connection is used per request to avoid opening multiple connections to the database.
+The memes.database which is ran through the driver SQLlite stores all the information from memes to users information. To intialise my program (python.file) with the database I first need to connect to it. The function [get_db] below connects to the database [^1] . It ensures that a single connection is used per request to avoid opening multiple connections to the database. 
 ```.py
 def get_db():
     db = getattr(g, '_database', None) #defines the db as database, also utalizes an object provided by flask called g to store data during lifetime of request [^1]
-    if db is None:
+    if db is None: #checks if there isn't a current database connection for request 
         db = g._database = sqlite3.connect(DATABASE)
         db.row_factory = sqlite3.Row
     return db
 ```
-The next function I use is disconect from the database, in which after the database recives a request it closes [^1].
+The next function I use disconnects from the database, ensuring that the connection is closed after each request is processed. [^1].
 
 ```.py
 
 def close_connection(exception):
     db = getattr(g, '_database', None)
-    if db is not None:
+    if db is not None: # Checks if there is an existing database connection and if there is disconnected from Database
         db.close()
 ```
+The pros of using a function is whenever you need to Query the data base you aren't repetetive with the connection and closing connection code.
 
 # CSS Styling
 CSS styling allows you to have a standard format and presentation for the spacing of images/textboxs/headers/etc. In this project I utalized a premade template [^1]. The CSS visual appearance is below.
