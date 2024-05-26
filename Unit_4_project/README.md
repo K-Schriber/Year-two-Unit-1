@@ -148,7 +148,8 @@ Fig 2: LOGGED OUT
 ```
 
 ## Session function
-The session function stores information about a user's session across multiple requests. 
+The session function stores information about a user's session across multiple requests. In the Flask application, cookies and sessions are closely related that the session data in this case `user_id` is stored in cookies. When you store information in the session object in Flask the data is serialized and placed into a cookie that is sent to the user's browser (Figure 1). This session cookie is then included in all the next HTTP requests. By verifying and deserializing the session cookie, Flask can retrieve the stored session data, ensuring a seamless and consistent user experience throughout their interaction with the application. 
+
 ```.py
 @app.route('/')
 def index():
@@ -157,6 +158,9 @@ def index():
     return redirect(url_for('home'))
 ```
 
+Figure 1: User Cookie: User_id Cookie = 1
+
+<img width="451" alt="Screenshot 2024-05-27 at 8 39 02 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/f4b3a37a-1594-4310-92e3-e53a28560b43">
 
 
 # Succes Criteria 1: The application for the Meme Reddit has a login/register system
@@ -206,8 +210,12 @@ def login():
     return render_template('login.html', error=error)
 ```
 ### Citations
+
 [^1]:USING SQLITE WITH FLASK, Pallets, msiz07-flask-docs-ja.readthedocs.io/ja/latest/patterns/sqlite3.html. 
 [^2]:“Styles & CSS.” Docs, docs.astro.build/en/guides/styling/. Accessed 26 May 2024. 
 [^3]:“Template Extending.” Template Extending · HonKit, tutorial.djangogirls.org/en/template_extending/. Accessed 26 May 2024. 
 [^4]: “Try, except, Else, Finally in Python (Exception Handling).” Nkmk Note, note.nkmk.me/en/python-try-except-else-finally/. Accessed 26 May 2024. 
 [^5]:“Protecting Databases with Parameterized Queries.” Blue Goat Cyber, 21 Apr. 2024, bluegoatcyber.com/blog/protecting-databases-with-parameterized-queries/. 
+[^6]:Ruscica, Tim. “Sessions.” Flask Tutorial, www.techwithtim.net/tutorials/flask/sessions. Accessed 26 May 2024. 
+[^7]:
+[^8]:
