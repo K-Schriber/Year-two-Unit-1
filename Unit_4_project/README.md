@@ -202,7 +202,7 @@ Figure 5: LOGIN PAGE
 
 <img width="1501" alt="Screenshot 2024-05-27 at 9 08 58 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/f728564c-bf85-4fa4-80ab-8f7c8a5530f8">
 
-
+Code for login page 
 ```.py
 @app.route('/login', methods=['GET', 'POST'])
 def login():
