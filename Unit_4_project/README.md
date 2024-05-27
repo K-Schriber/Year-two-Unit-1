@@ -195,7 +195,7 @@ Figure 4: REGISTRATION PAGE
 
 <img width="1511" alt="Screenshot 2024-05-27 at 9 10 54 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/39ec58c0-f0d0-4c51-832a-47b96d029751">
 
-# Login 
+## Login 
 The login system works similary to the registration system except will only allow the user to login if there is an exsisting account. The login page asks the user to input username and password into two text boxes and has a submit button. Once the user clicks the submit button using an if statement if it sends a POST request. Then the username/password are saved in two variables and the the program connects to the database. The database then does a parameteraidsed query (Query for SQL injection prevention) to see if the username is located in the database. If it is then it checks if the provided password matches the hashed password stored in the database. If both match username/password match in database the users id is put into a session via `user_id` and the fucntion redirects the user to the home page. Else if they don't match the user is returned with an error. The HTML rendering of the login figure 5
 
 Figure 5: LOGIN PAGE
@@ -221,6 +221,39 @@ def login():
     return render_template('login.html', error=error)
 ```
 
+# Succes Criteria 2: A posting system to EDIT/CREATE/DELETE comments
+The user is able to edit, create, and review comments under memes. This allows multiple users to add input about the meme.
+
+## Adding Comment
+The first part of the comments system is letting users be able to add comments. To add comments it uses a function called Meme details. The first step is connection to the database. Then it uses a if Statement to check if the the user has clicked the comments button and if it's a `POST` request. If it is it the users comment is saved into a variable called content and then a insert paramatized query is execute for three values `content`, `meme_id`, and `user_id`. After the values are commited (saves) to the table Comment the data bases closes and the meme.html is rendered. However if the HTTP request is a `GET` request then the function gets the meme details along with all the associated comments. The first step is a SQL query that fetches the details of the meme, including its category name and the username of its creator. The result is stored in `meme`.
+
+```.py
+@app.route('/meme/<int:meme_id>', methods=['GET', 'POST'])
+def meme_detail(meme_id):
+    if not session.get('user_id'):
+        return redirect(url_for('login')) #Extra Security to make sure the User is in the right session
+    
+    db = get_db()
+    if request.method == 'POST':
+        content = request.form['content']
+        db.execute('INSERT INTO comment (content, meme_id, user_id) VALUES (?, ?, ?)',
+                   (content, meme_id, session['user_id']))
+        db.commit()
+        return redirect(url_for('meme_detail', meme_id=meme_id))
+    
+    cur = db.execute('SELECT meme.*, category.name as category_name, user.username as creator_name '
+                     'FROM meme '
+                     'JOIN category ON meme.category_id = category.id '
+                     'JOIN user ON meme.created_by = user.id '
+                     'WHERE meme.id = ?', (meme_id,))
+    meme = cur.fetchone()
+    
+    cur = db.execute('SELECT comment.*, user.username as commenter_name '
+                     'FROM comment '
+                     'JOIN user ON comment.user_id = user.id '
+                     'WHERE comment.meme_id = ?', (meme_id,))
+    comments = cur.fetchall()
+```
 
 
 Figure
