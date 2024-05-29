@@ -225,7 +225,7 @@ def login():
 The user is able to edit, create, and review comments under memes. This allows multiple users to add input about the meme.
 
 ## Adding Comment
-The first part of the comments system is letting users be able to add comments. To add comments it uses a function called Meme details. The first step is connection to the database. Then it uses a if Statement to check if the the user has clicked the comments button and if it's a `POST` request. If it is it the users comment is saved into a variable called content and then a insert paramatized query is execute for three values `content`, `meme_id`, and `user_id`. After the values are commited (saved) to the table Comment the data bases closes and the meme.html is rendered. However if the HTTP request is a `GET` request then the function gets the meme details along with all the associated comments. This first query fetches the details of a specific meme,  category name, and the username of its creator. The result is stored in the meme variable. The next query gets all comments associated with the specified meme and the username of each commenter. The results are stored in the `comments` variable. The meme detail HTML is then Rendered. 
+The first part of the comments system is letting users be able to add comments. To add comments it uses a function called Meme details. The first step is connection to the database. Then it uses a if Statement to check if the the user has clicked the comments button and if it's a `POST` request. If it is it the users comment is saved into a variable called content and then a insert paramatized query is execute for three values `content`, `meme_id`, and `user_id`. After the values are commited (saved) to the table Comment the data bases closes and the meme.html is rendered.  A time stamp is also saved into the comments table to show when users made comments. However if the HTTP request is a `GET` request then the function gets the meme details along with all the associated comments. This first query fetches the details of a specific meme,  category name, and the username of its creator. The result is stored in the meme variable. The next query gets all comments associated with the specified meme and the username of each commenter. The results are stored in the `comments` variable. The meme detail HTML is then Rendered Figure 6. More details about the SQL queries are next to the code below.
 
 ```.py
 @app.route('/meme/<int:meme_id>', methods=['GET', 'POST'])
@@ -241,23 +241,25 @@ def meme_detail(meme_id):
         db.commit()
         return redirect(url_for('meme_detail', meme_id=meme_id))
     
-    cur = db.execute('SELECT meme.*, category.name as category_name, user.username as creator_name '
+    cur = db.execute('SELECT meme.*, category.name as category_name, user.username as creator_name ' # Selects all columns from the meme table and selects the name column from the category table and renames it to category_name
                      'FROM meme '
-                     'JOIN category ON meme.category_id = category.id '
-                     'JOIN user ON meme.created_by = user.id '
+                     'JOIN category ON meme.category_id = category.id ' #joins  the meme and category tables and matches rows so meme.category_id equals category.id
+                     'JOIN user ON meme.created_by = user.id ' # joins meme and user tables and matches rows so meme.created_id equals user_id
                      'WHERE meme.id = ?', (meme_id,))
     meme = cur.fetchone()
     
-    cur = db.execute('SELECT comment.*, user.username as commenter_name '
-                     'FROM comment '
-                     'JOIN user ON comment.user_id = user.id '
-                     'WHERE comment.meme_id = ?', (meme_id,))
+    cur = db.execute('SELECT comment.*, user.username as commenter_name ' # selects all collums from table users
+                     'FROM comment ' 
+                     'JOIN user ON comment.user_id = user.id ' # joins the comment and user table matching rows  so comment.user_id = user.id
+                     'WHERE comment.meme_id = ?', (meme_id,)) #filters the results so it only includes rows that match the meme_id
     comments = cur.fetchall()
     return render_template('meme_detail.html', meme=meme, comments=comments)
 ```
 
 
-Figure
+Figure 6: Add Comment System : The Comments display the user who created it and the time it was added. It also shows other users comments on the post
+
+<img width="483" alt="Screenshot 2024-05-29 at 9 32 13 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/e635ec8c-c307-4221-8465-5767b988f6df">
 
 
 ### Citations
