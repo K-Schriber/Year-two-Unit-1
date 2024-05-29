@@ -319,6 +319,35 @@ Figure 9: The user can edit the comment. Once they click Update sends POST reque
 <img width="267" alt="Screenshot 2024-05-29 at 2 54 18 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/62616293-32c8-43b8-a48e-fd913e143c33">
 
 # Succes Criteria 3: A system to add/remove likes
+The application must have a way for users to like and unlike posts so users can tell what is popular and what is not. The like system works similiarly to the comment system. First connects to database then does a parmaterized query in the `like table` to check if the user has liked the meme based on the `meme_id` and the `user_id`. If there is no like that exists in the table then the program queries to insert a new like into the `like table`. If there is a like that exists in the table then the application uses a delete paramaterized query to delete the like. The meme detail HDML is then rendered.(Python Code) The meme_detail HDML (see HDML below) uses JINJA such as calling for the `like count`, which is a seperate function that uses a count querie through the like table to count the amount of likes. This is also seen when the the liking the meme creates a POST request utalizing jinja to get the URL. Following that the Jinja is used to rename the button if the user wishes to like (figure 10) or if they want to unlike (figure 11).  
+
+## Python code
+```.py
+def like_meme(meme_id):
+    db = get_db()
+    cur = db.execute('SELECT * FROM like WHERE meme_id = ? AND user_id = ?', (meme_id, session['user_id']))
+    if cur.fetchone() is None:
+        db.execute('INSERT INTO like (meme_id, user_id) VALUES (?, ?)', (meme_id, session['user_id']))
+    else:
+        db.execute('DELETE FROM like WHERE meme_id = ? AND user_id = ?', (meme_id, session['user_id']))
+    db.commit()
+    return redirect(url_for('meme_detail', meme_id=meme_id))
+```
+## HTML syntax
+```.html
+<p><strong>Likes:</strong> {{ like_count }}</p>
+<form method="post" action="{{ url_for('like_meme', meme_id=meme.id) }}">
+    <button type="submit">{{ 'Unlike' if user_liked else 'Like' }}</button>
+</form>
+```
+
+Figure 10: The user can like the post
+
+<img width="341" alt="Screenshot 2024-05-29 at 7 56 30 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/55b64e40-297f-48ed-8e05-f483782f73bb">
+
+Figure 11: The user can unlike the post
+
+<img width="313" alt="Screenshot 2024-05-29 at 7 56 38 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/964886f6-002b-4377-9eaa-49cc3ea9b4f3">
 
 
 ### Citations
@@ -331,4 +360,5 @@ Figure 9: The user can edit the comment. Once they click Update sends POST reque
 [^6]:Ruscica, Tim. “Sessions.” Flask Tutorial, www.techwithtim.net/tutorials/flask/sessions. Accessed 26 May 2024. 
 [^7]:“Edit Blog Posts - Flask Fridays #20.” YouTube, YouTube, 2 July 2021, www.youtube.com/watch?v=N4Nz0cYuCnc. 
 [^8]:Python, Real. “Jinja Templating (Overview).” Real Python, realpython.com/lessons/jinja-templating-overview/#:~:text=Jinja%20is%20a%20text%20templating,together%20using%20inheritance%20and%20inclusion. Accessed 29 May 2024. 
+
 
