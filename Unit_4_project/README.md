@@ -280,7 +280,7 @@ Figure 7: Delete Comment button to delete comments from user
 <img width="395" alt="Screenshot 2024-05-29 at 9 55 10 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/d2a1ba31-bdd9-45b4-a58a-e2aa7d686928">
 
 ## Editing Comment
-The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it. First 
+The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it. If the user clic
 ```.py
 def edit_comment(comment_id):
   
