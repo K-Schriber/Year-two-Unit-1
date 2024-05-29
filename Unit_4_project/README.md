@@ -318,6 +318,7 @@ Figure 9: The user can edit the comment. Once they click Update sends POST reque
 
 <img width="267" alt="Screenshot 2024-05-29 at 2 54 18 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/62616293-32c8-43b8-a48e-fd913e143c33">
 
+# Succes Criteria 3: A system to add/remove likes
 
 
 ### Citations
