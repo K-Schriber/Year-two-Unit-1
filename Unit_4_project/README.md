@@ -261,6 +261,45 @@ Figure 6: Add Comment System : The Comments display the user who created it and 
 
 <img width="483" alt="Screenshot 2024-05-29 at 9 32 13 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/e635ec8c-c307-4221-8465-5767b988f6df">
 
+## Deleting Comment
+The second part of the comment system is being able to the delete commements that the user has posted. Using a function called `delete_comment` the first process is connecting to the database then from using and paratized query to select the comment_id from the comments table. Using an if statement the program checks if the comment_id saved in the variable `comment` is eqaul to the `user_Id` of the session. If it is the comment is deleted from the comment table and the meme_detail page is rendered again. On the screen the user sees a delete button next to all there comments Figure 7:
+
+```.py
+@app.route('/delete_comment/<int:comment_id>', methods=['POST'])
+def delete_comment(comment_id):
+    db = get_db()
+    cur = db.execute('SELECT * FROM comment WHERE id = ?', (comment_id,))
+    comment = cur.fetchone()
+    if comment and comment['user_id'] == session['user_id']:
+        db.execute('DELETE FROM comment WHERE id = ?', (comment_id,))
+        db.commit()
+    return redirect(url_for('meme_detail', meme_id=comment['meme_id']))
+```
+Figure 7: Delete Comment button to delete comments from user
+
+<img width="395" alt="Screenshot 2024-05-29 at 9 55 10 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/d2a1ba31-bdd9-45b4-a58a-e2aa7d686928">
+
+## Editing Comment
+The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it. First 
+```.py
+def edit_comment(comment_id):
+  
+    db = get_db()
+    cur = db.execute('SELECT * FROM comment WHERE id = ?', (comment_id,))
+    comment = cur.fetchone()
+
+    if not comment or comment['user_id'] != session['user_id']:
+        return redirect(url_for('home'))
+
+    if request.method == 'POST':
+        content = request.form['content']
+        db.execute('UPDATE comment SET content = ? WHERE id = ?', (content, comment_id))
+        db.commit()
+        return redirect(url_for('meme_detail', meme_id=comment['meme_id']))
+
+    return render_template('edit_comment.html', comment=comment)
+
+```
 
 ### Citations
 
