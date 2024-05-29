@@ -225,7 +225,7 @@ def login():
 The user is able to edit, create, and review comments under memes. This allows multiple users to add input about the meme.
 
 ## Adding Comment
-The first part of the comments system is letting users be able to add comments. To add comments it uses a function called Meme details. The first step is connection to the database. Then it uses a if Statement to check if the the user has clicked the comments button and if it's a `POST` request. If it is it the users comment is saved into a variable called content and then a insert paramatized query is execute for three values `content`, `meme_id`, and `user_id`. After the values are commited (saves) to the table Comment the data bases closes and the meme.html is rendered. However if the HTTP request is a `GET` request then the function gets the meme details along with all the associated comments. The first step is a SQL query that fetches the details of the meme, including its category name and the username of its creator. The result is stored in `meme`.
+The first part of the comments system is letting users be able to add comments. To add comments it uses a function called Meme details. The first step is connection to the database. Then it uses a if Statement to check if the the user has clicked the comments button and if it's a `POST` request. If it is it the users comment is saved into a variable called content and then a insert paramatized query is execute for three values `content`, `meme_id`, and `user_id`. After the values are commited (saved) to the table Comment the data bases closes and the meme.html is rendered. However if the HTTP request is a `GET` request then the function gets the meme details along with all the associated comments. This first query fetches the details of a specific meme,  category name, and the username of its creator. The result is stored in the meme variable. The next query gets all comments associated with the specified meme and the username of each commenter. The results are stored in the `comments` variable. The meme detail HTML is then Rendered. 
 
 ```.py
 @app.route('/meme/<int:meme_id>', methods=['GET', 'POST'])
@@ -253,6 +253,7 @@ def meme_detail(meme_id):
                      'JOIN user ON comment.user_id = user.id '
                      'WHERE comment.meme_id = ?', (meme_id,))
     comments = cur.fetchall()
+    return render_template('meme_detail.html', meme=meme, comments=comments)
 ```
 
 
