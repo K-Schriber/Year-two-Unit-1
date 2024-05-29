@@ -301,6 +301,7 @@ def edit_comment(comment_id):
 
 ```
 Figure 8: The user is prompted in the Specfic meme page The choice to edit
+
 <img width="412" alt="Screenshot 2024-05-29 at 2 54 12 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/549fc312-b3b6-4e12-a5fe-6553a20bd776">
 
 Figure 9: The user can edit the comment. Once they click Update sends POST request to the function edit comment.
