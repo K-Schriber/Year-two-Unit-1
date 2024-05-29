@@ -280,7 +280,7 @@ Figure 7: Delete Comment button to delete comments from user
 <img width="395" alt="Screenshot 2024-05-29 at 9 55 10 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/d2a1ba31-bdd9-45b4-a58a-e2aa7d686928">
 
 ## Editing Comment
-The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it. If the user clic
+The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it Figure 8. To make sure users can only edit there own comment I utalize and If statement that checks if there is no comments or if the Comment_user_id is eqaul to the session ID in one of the equirments are met it returns to home page. The next if statment checks if the User sends a POST request to the program . If so the function updates the `comment` in the comment table with the updates and redirects the user back to the meme detail page. Else if it is a GET request then the the function and renders the html page for editing the comment Figure 9.
 ```.py
 def edit_comment(comment_id):
   
@@ -300,6 +300,14 @@ def edit_comment(comment_id):
     return render_template('edit_comment.html', comment=comment)
 
 ```
+Figure 8: The user is prompted in the Specfic meme page The choice to edit
+<img width="412" alt="Screenshot 2024-05-29 at 2 54 12 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/549fc312-b3b6-4e12-a5fe-6553a20bd776">
+
+Figure 9: The user can edit the comment. Once they click Update sends POST request to the function edit comment.
+
+<img width="267" alt="Screenshot 2024-05-29 at 2 54 18 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/62616293-32c8-43b8-a48e-fd913e143c33">
+
+
 
 ### Citations
 
