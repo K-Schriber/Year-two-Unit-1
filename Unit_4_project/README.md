@@ -280,7 +280,7 @@ Figure 7: Delete Comment button to delete comments from user
 <img width="395" alt="Screenshot 2024-05-29 at 9 55 10 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/d2a1ba31-bdd9-45b4-a58a-e2aa7d686928">
 
 ## Editing Comment
-The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it Figure 8. To make sure users can only edit there own comment I utalize and If statement that checks if there is no comments or if the Comment_user_id is eqaul to the session ID in one of the equirments are met it returns to home page. The next if statment checks if the User sends a POST request to the program . If so the function updates the `comment` in the comment table with the updates and redirects the user back to the meme detail page. Else if it is a GET request then the the function and renders the html page for editing the comment Figure 9.
+The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it Figure 8. To make sure users can only edit there own comment I utalize and If statement that checks if there is no comments or if the Comment_user_id is eqaul to the session ID in one of the equirments are met it returns to home page. The next if statment checks if the User sends a POST request to the program [^7]. If so the function updates the `comment` in the comment table with the updates and redirects the user back to the meme detail page. Else if it is a GET request then the the function and renders the html page for editing the comment Figure 9.
 ```.py
 def edit_comment(comment_id):
   
@@ -300,6 +300,16 @@ def edit_comment(comment_id):
     return render_template('edit_comment.html', comment=comment)
 
 ```
+
+The editing HTML that is rendered allows the user to edit the comment. And change the get request to Post Request once they have clicked the edit comment button. In the HTML syntax the `form` element specfies that it should be submit using POST method. The URl for edit_comment and comment_id gets the url for the specfic meme through the uses of Jinja a web templant engine for pyhton. Jinja allows embedding Python-like expressions and control structures within your HTML templates such as if statements, loops, and compose different templates together using inheritance. The next part of the html synatx is the text box which uses jinja again to inserts the current content of the comment into the textarea when the form is rendered. The last element the button submits the form and runs it through the edit_comment fucntion but ths time as a Post request.
+
+```.html
+<h2>Edit Comment</h2>
+<form method="post" action="{{ url_for('edit_comment', comment_id=comment.id) }}">
+    <textarea name="content" required>{{ comment.content }}</textarea><br>
+    <button type="submit">Update Comment</button>
+</form>
+```
 Figure 8: The user is prompted in the Specfic meme page The choice to edit
 
 <img width="412" alt="Screenshot 2024-05-29 at 2 54 12 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/549fc312-b3b6-4e12-a5fe-6553a20bd776">
@@ -318,5 +328,6 @@ Figure 9: The user can edit the comment. Once they click Update sends POST reque
 [^4]: “Try, except, Else, Finally in Python (Exception Handling).” Nkmk Note, note.nkmk.me/en/python-try-except-else-finally/. Accessed 26 May 2024. 
 [^5]:“Protecting Databases with Parameterized Queries.” Blue Goat Cyber, 21 Apr. 2024, bluegoatcyber.com/blog/protecting-databases-with-parameterized-queries/. 
 [^6]:Ruscica, Tim. “Sessions.” Flask Tutorial, www.techwithtim.net/tutorials/flask/sessions. Accessed 26 May 2024. 
-[^7]:
-[^8]:
+[^7]:“Edit Blog Posts - Flask Fridays #20.” YouTube, YouTube, 2 July 2021, www.youtube.com/watch?v=N4Nz0cYuCnc. 
+[^8]:Python, Real. “Jinja Templating (Overview).” Real Python, realpython.com/lessons/jinja-templating-overview/#:~:text=Jinja%20is%20a%20text%20templating,together%20using%20inheritance%20and%20inclusion. Accessed 29 May 2024. 
+
