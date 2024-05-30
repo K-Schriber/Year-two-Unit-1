@@ -170,7 +170,7 @@ App routes is the framework for mapping the url destincations to functions. Spec
 @app.route('/meme/<int:meme_id>', methods=['GET', 'POST'])
 ```
 
-Figure 3: The figure
+Figure 3: The url contains HTTP (Hypertext Transfer Protocol) which is used to communicate with the server. The next part of the URL is 127.0.0.1 which is the ip of the server address (THis id is special cause it's ran on a local server). The next section is the port where the server is waiting for requests in this case 5000 (Defeault port for flask development server). And finally, specific path to meme on the server (explained above).
 
 <img width="228" alt="Screenshot 2024-05-30 at 2 03 27 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/ad38050b-18a3-4dfd-914b-123cbbd6e29a">
 
