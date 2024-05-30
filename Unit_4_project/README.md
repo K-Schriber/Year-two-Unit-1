@@ -9,6 +9,7 @@
 - If statements
 - Variables
 - Functions
+- Token/ Sessions
 
 
 # Memes database
@@ -147,7 +148,7 @@ Fig 2: LOGGED OUT
 ```
 
 # Session function
-The session function stores information about a user's session across multiple requests. In the Flask application, cookies and sessions are closely related that the session data in this case `user_id` is stored in cookies. When you store information in the session object in Flask the data is serialized and placed into a cookie that is sent to the user's browser (Figure 3)[^6]. This session cookie is then included in all the next HTTP requests. By verifying the session cookie Flask can retrieve the stored session data. This ensures a secure and consistent user experience throughout the application [^6]. 
+The session function stores information about a user's session across multiple requests. In the Flask application, cookies and sessions are closely related that the session data in this case `user_id` is stored in cookies. When you store information in the session object in Flask the data is serialized and placed into a cookie that is sent to the user's browser (Figure 3)[^6]. This session cookie is then included in all the next HTTP requests. By verifying the session cookie Flask can retrieve the stored session data. This ensures a secure and consistent user experience throughout the application [^6]. Through the entire application the Session function is checked after the function is called for maximum security.
 
 The function 
 ```.py
@@ -359,13 +360,47 @@ Figure 11: The user can unlike the post
 <img width="313" alt="Screenshot 2024-05-29 at 7 56 38 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/964886f6-002b-4377-9eaa-49cc3ea9b4f3">
 
 
-# Succes Criteria 4: The application for the Meme Reddit has a ystem to follow/unfollow categories
+# Succes Criteria 4: The application for the Meme Reddit has a system to follow/unfollow categories
+
+The user is given 5 categories to select from to choose what memes show up on there home page feed. The five categories are managed under two functions `follow_category` and `unfollow_category`. When the user clicks a text box to follow the category the first function uses an SQL querie add an entry user category table to track the link between the user and category. Similiary, the second function when the user unclicks the catergories the entry from the table is removed.  The functions utalize the session data which has the `user_id` to track what users follow which categories. The use of the tools like SQL queries (to insert and delete rows), Session management(to stores users data across requests), and routes (to map the URL paths to view functions and the HTTP methods they use).
+
+### Follow Category Function
+```.py
+@app.route('/follow/<int:category_id>', methods=['POST'])
+def follow_category(category_id):
+    if not session.get('user_id'):
+        return redirect(url_for('login'))
+    
+    db = get_db()
+    db.execute('INSERT INTO user_category_follow (user_id, category_id) VALUES (?, ?)', 
+               (session['user_id'], category_id))
+    db.commit()
+    return redirect(url_for('home'))
+
+```
+### Unfollow Category Function
+```.py
+@app.route('/unfollow/<int:category_id>', methods=['POST'])
+def unfollow_category(category_id):
+    if not session.get('user_id'):
+        return redirect(url_for('login'))
+    
+    db = get_db()
+    db.execute('DELETE FROM user_category_follow WHERE user_id = ? AND category_id = ?', 
+               (session['user_id'], category_id))
+    db.commit()
+    return redirect(url_for('home'))
+
+```
+As you can see both functions are extremely similiar in the type of HTTP methods they accept, session id check, and connecting to the database for an SQL query. However, the queries are both differant with one INSERTing values into the table and the other DELETing values then they both render the home page. Which shows all the memes under the categories the user selected.
 
 
 
 
+# Criteria D : Functionality 
 
 
+https://youtu.be/0HS0uZ9COG8
 
 
 
@@ -385,9 +420,4 @@ Figure 11: The user can unlike the post
 
 
 
-
-# Criteria D : Functionality 
-
-
-https://youtu.be/0HS0uZ9COG8
 
