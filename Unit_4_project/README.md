@@ -360,6 +360,15 @@ Figure 11: The user can unlike the post
 <img width="313" alt="Screenshot 2024-05-29 at 7 56 38 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/964886f6-002b-4377-9eaa-49cc3ea9b4f3">
 
 
+
+
+
+
+
+
+
+
+
 ### Citations
 
 [^1]:USING SQLITE WITH FLASK, Pallets, msiz07-flask-docs-ja.readthedocs.io/ja/latest/patterns/sqlite3.html. 
@@ -373,4 +382,11 @@ Figure 11: The user can unlike the post
 [^9]:“Flask App Routing.” GeeksforGeeks, GeeksforGeeks, 10 Mar. 2023, www.geeksforgeeks.org/flask-app-routing/. 
 
 
+
+
+
+# Criteria D : Functionality 
+
+
+https://youtu.be/0HS0uZ9COG8
 
