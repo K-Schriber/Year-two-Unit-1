@@ -147,7 +147,7 @@ Fig 2: LOGGED OUT
 </html>
 ```
 
-## Session function
+# Session function
 The session function stores information about a user's session across multiple requests. In the Flask application, cookies and sessions are closely related that the session data in this case `user_id` is stored in cookies. When you store information in the session object in Flask the data is serialized and placed into a cookie that is sent to the user's browser (Figure 3)[^6]. This session cookie is then included in all the next HTTP requests. By verifying the session cookie Flask can retrieve the stored session data. This ensures a secure and consistent user experience throughout the application [^6]. 
 
 The function 
@@ -162,6 +162,10 @@ def index():
 Figure 3: User Cookie: User_id Cookie = 1
 
 <img width="451" alt="Screenshot 2024-05-27 at 8 39 02 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/f4b3a37a-1594-4310-92e3-e53a28560b43">
+
+# Flask App Routes
+App routes is the framework for mapping the url destincations to functions. Specficallyin `@app.route` is a decorator used to map URL paths (endpoints) to view functions. The mapping determines what function should be called when the a specfic URL is requested by the user [^9]. The `app.route` also defines the methods that are allowed for the root such as GET and POST requests. For example in this application 
+
 
 
 # Succes Criteria 1: The application for the Meme Reddit has a login/register system
@@ -360,5 +364,6 @@ Figure 11: The user can unlike the post
 [^6]:Ruscica, Tim. “Sessions.” Flask Tutorial, www.techwithtim.net/tutorials/flask/sessions. Accessed 26 May 2024. 
 [^7]:“Edit Blog Posts - Flask Fridays #20.” YouTube, YouTube, 2 July 2021, www.youtube.com/watch?v=N4Nz0cYuCnc. 
 [^8]:Python, Real. “Jinja Templating (Overview).” Real Python, realpython.com/lessons/jinja-templating-overview/#:~:text=Jinja%20is%20a%20text%20templating,together%20using%20inheritance%20and%20inclusion. Accessed 29 May 2024. 
+[^9]:“Flask App Routing.” GeeksforGeeks, GeeksforGeeks, 10 Mar. 2023, www.geeksforgeeks.org/flask-app-routing/. 
 
 
