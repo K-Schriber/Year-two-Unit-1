@@ -164,9 +164,15 @@ Figure 3: User Cookie: User_id Cookie = 1
 <img width="451" alt="Screenshot 2024-05-27 at 8 39 02 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/f4b3a37a-1594-4310-92e3-e53a28560b43">
 
 # Flask App Routes
-App routes is the framework for mapping the url destincations to functions. Specficallyin `@app.route` is a decorator used to map URL paths (endpoints) to view functions. The mapping determines what function should be called when the a specfic URL is requested by the user [^9]. The `app.route` also defines the methods that are allowed for the root such as GET and POST requests. For example in this application 
+App routes is the framework for mapping the url destincations to functions. Specficallyin `@app.route` is a decorator used to map URL paths (endpoints) to view functions. The mapping determines what function should be called when the a specfic URL is requested by the user [^9]. The `app.route` also defines the methods that are allowed for the root such as GET and POST requests. For each page within the application there is an app route. An example of an app route python code in this application is below  which takes the user to the specfic meme the user has clicked on. The url is formated by /meme/(the meme id in the database) and can be seen below Figure 3:  
 
+```.py
+@app.route('/meme/<int:meme_id>', methods=['GET', 'POST'])
+```
 
+Figure 3: The figure
+
+<img width="228" alt="Screenshot 2024-05-30 at 2 03 27 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/ad38050b-18a3-4dfd-914b-123cbbd6e29a">
 
 # Succes Criteria 1: The application for the Meme Reddit has a login/register system
 I have created a login/registration system that allows users to each have there own account by loggin in or registering if they don't have an account. 
@@ -365,5 +371,6 @@ Figure 11: The user can unlike the post
 [^7]:“Edit Blog Posts - Flask Fridays #20.” YouTube, YouTube, 2 July 2021, www.youtube.com/watch?v=N4Nz0cYuCnc. 
 [^8]:Python, Real. “Jinja Templating (Overview).” Real Python, realpython.com/lessons/jinja-templating-overview/#:~:text=Jinja%20is%20a%20text%20templating,together%20using%20inheritance%20and%20inclusion. Accessed 29 May 2024. 
 [^9]:“Flask App Routing.” GeeksforGeeks, GeeksforGeeks, 10 Mar. 2023, www.geeksforgeeks.org/flask-app-routing/. 
+
 
 
