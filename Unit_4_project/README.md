@@ -402,28 +402,30 @@ if followed_categories:
             JOIN category ON meme.category_id = category.id 
             JOIN user ON meme.created_by = user.id
             WHERE category.id IN ({placeholders})
+            '''
+ cur = db.execute(query, followed_categories)
 ```
 
 This if statment above takes all the memes under the catergories the user follows
 
-Part of the home HTML is below which utalizes Jinja to use for loops and if statements to check if the user follows the categories. If they do  the next for loop look goes throught the memes of the SQL query above and displays all memes of the catergory the user follows showing the Meme detail link, caterogy its under, and the meme creator name.
+Part of the home HTML is below which utalizes Jinja to use for loops and if statements to check if the user follows the categories. If they do the next for loop look goes through the memes of the SQL query above and displays all memes of the catergory the user follows showing the Meme detail link, caterogy its under, and the meme creator name Figure(10). Helpfel comments on the side of the HTML syntax to better understand the processs
 
 ```.html
-{% for category in categories %}
+{% for category in categories %} #goes through categories user follow
         <div>
             <strong>{{ category.name }}</strong>
             {% if category.id in followed_categories %}
                 <form method="post" action="{{ url_for('unfollow_category', category_id=category.id) }}" style="display:inline;">
-                    <button type="submit">Unfollow</button>
+                    <button type="submit">Unfollow</button> #displays unfollow button and also tell system to run UNfollow function above
                 </form>
             {% else %}
                 <form method="post" action="{{ url_for('follow_category', category_id=category.id) }}" style="display:inline;">
-                    <button type="submit">Follow</button>
+                    <button type="submit">Follow</button> #displays follow button and also tell system to run follow function above
                 </form>
             {% endif %}
         </div>
     {% endfor %}
-{% for meme in memes %}
+{% for meme in memes %} #goes through erach meme in category user follows
     <li>
         <h3><a href="{{ url_for('meme_detail', meme_id=meme.id) }}">{{ meme.title }}</a></h3>
         <p><strong>Category:</strong> {{ meme.category_name }}</p>
@@ -432,11 +434,27 @@ Part of the home HTML is below which utalizes Jinja to use for loops and if stat
     </li>
     {% endfor %}
 ```
+Figure 10: The home menu. Options for users to follow categories and shows memes.
 
+<img width="561" alt="Screenshot 2024-05-31 at 8 24 20 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/ca73ba6c-1198-4e6d-a341-1f6c4c01810b">
 
 # Succes Criteria 5: The application for the Meme Reddit has a profile page with relevant information
 
+Since the application needs users to be able to view there profile. I have created it so that when the user goes to the profile page they get all the relevent informatuion related to there account. The profile page shows the Username, the memes created, the comments made, and the categories the user follows Figure 11, figure 12.
 
+
+Figure 11: Shows the username and the memes the user has uploaded
+
+<img width="565" alt="Screenshot 2024-05-31 at 8 42 14 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/8ccf790d-70d7-40f4-bac7-c228c6a43389">
+
+
+Figure 12: Shows the comments made on posts and the categories the user follows
+
+<img width="525" alt="Screenshot 2024-05-31 at 8 42 19 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/5eab1e16-082c-4b3e-b3af-6c9b3f6041b4">
+
+```.py
+
+```
 
 
 # Criteria D : Functionality 
