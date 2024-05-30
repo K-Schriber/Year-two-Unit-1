@@ -9,7 +9,6 @@
 - If statements
 - Variables
 - Functions
-- Lists
 
 
 # Memes database
@@ -359,6 +358,8 @@ Figure 11: The user can unlike the post
 
 <img width="313" alt="Screenshot 2024-05-29 at 7 56 38 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/964886f6-002b-4377-9eaa-49cc3ea9b4f3">
 
+
+# Succes Criteria 4: The application for the Meme Reddit has a ystem to follow/unfollow categories
 
 
 
