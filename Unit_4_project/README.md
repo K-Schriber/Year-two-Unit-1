@@ -392,7 +392,49 @@ def unfollow_category(category_id):
     return redirect(url_for('home'))
 
 ```
-As you can see both functions are extremely similiar in the type of HTTP methods they accept, session id check, and connecting to the database for an SQL query. However, the queries are both differant with one INSERTing values into the table and the other DELETing values then they both render the home page. Which shows all the memes under the categories the user selected.
+As you can see both functions are extremely similiar in the type of HTTP methods they accept, session id check, and connecting to the database for an Parameterised SQL query. However, the queries are both differant with one INSERTing values into the table and the other DELETing values then they both render the home page HTML. Which shows all the memes under the categories the user selected.
+
+```.py
+if followed_categories:
+        query = f'''
+            SELECT meme.*, category.name as category_name, user.username as creator_name 
+            FROM meme 
+            JOIN category ON meme.category_id = category.id 
+            JOIN user ON meme.created_by = user.id
+            WHERE category.id IN ({placeholders})
+```
+
+This if statment above takes all the memes under the catergories the user follows
+
+Part of the home HTML is below which utalizes Jinja to use for loops and if statements to check if the user follows the categories. If they do  the next for loop look goes throught the memes of the SQL query above and displays all memes of the catergory the user follows showing the Meme detail link, caterogy its under, and the meme creator name.
+
+```.html
+{% for category in categories %}
+        <div>
+            <strong>{{ category.name }}</strong>
+            {% if category.id in followed_categories %}
+                <form method="post" action="{{ url_for('unfollow_category', category_id=category.id) }}" style="display:inline;">
+                    <button type="submit">Unfollow</button>
+                </form>
+            {% else %}
+                <form method="post" action="{{ url_for('follow_category', category_id=category.id) }}" style="display:inline;">
+                    <button type="submit">Follow</button>
+                </form>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% for meme in memes %}
+    <li>
+        <h3><a href="{{ url_for('meme_detail', meme_id=meme.id) }}">{{ meme.title }}</a></h3>
+        <p><strong>Category:</strong> {{ meme.category_name }}</p>
+        <p><strong>Created by:</strong> {{ meme.creator_name }}</p>
+        <img src="{{ meme.image_url }}" alt="{{ meme.title }}" width="300">
+    </li>
+    {% endfor %}
+```
+
+
+# Succes Criteria 5: The application for the Meme Reddit has a profile page with relevant information
 
 
 
