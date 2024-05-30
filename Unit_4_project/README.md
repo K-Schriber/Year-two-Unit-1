@@ -3,14 +3,14 @@
 ## List of techniques used
 - Flask Library/Routes
 - HTTP - GET and POST requests
-- Python/Django inside HTML
+- Python/Jinja inside HTML
 - CSS Styling
 - SQLITE Databases
 - If statements
 - Variables
 - Functions
 - Lists
-- Token-based authentication eerrmmm
+
 
 # Memes database
 The memes.database which is ran through the driver SQLlite stores all the information from memes to users information. To access/query/add/delete data I first need to connect to my program (python.file) with the database. The function `get_db` below connects to the database [^1] . It ensures that a single connection is used per request to avoid opening multiple connections to the database. 
