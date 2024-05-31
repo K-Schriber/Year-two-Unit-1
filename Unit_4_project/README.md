@@ -1,4 +1,4 @@
-# Criteria C : Documenting the development
+<img width="1510" alt="Screenshot 2024-05-31 at 9 05 02 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/6c1103c4-7e53-48ac-8cca-b0b1e60fdcbd"># Criteria C : Documenting the development
 
 ## List of techniques used
 - Flask Library/Routes
@@ -440,7 +440,7 @@ Figure 10: The home menu. Options for users to follow categories and shows memes
 
 # Succes Criteria 5: The application for the Meme Reddit has a profile page with relevant information
 
-Since the application needs users to be able to view there profile. I have created it so that when the user goes to the profile page they get all the relevent informatuion related to there account. The profile page shows the Username, the memes created, the comments made, and the categories the user follows Figure 11, figure 12.
+ I have created the profile page so when users click the page they get all the relevent informatuion related to their account. The profile page shows the Username, the memes created, the comments made, and the categories the user follows Figure 11, figure 12. This is done through multiple SQL queries that select all the Memes, comments, and categories based session `user_id` and then display . 
 
 
 Figure 11: Shows the username and the memes the user has uploaded
@@ -452,9 +452,42 @@ Figure 12: Shows the comments made on posts and the categories the user follows
 
 <img width="525" alt="Screenshot 2024-05-31 at 8 42 19 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/5eab1e16-082c-4b3e-b3af-6c9b3f6041b4">
 
-```.py
 
+# Succes Criteria 6: The application for the Meme Reddit allows users to upload images
+
+The final criteria is the ability for the user to upload memes to the meme reddit. This done through the `add_meme` function. The function only works if the user clicks the submit button sending a POST request and submits the fields required which are the title of the meme, Image Url of the meme, and the category field it falls under. The page that is rendered is what the user sees this when uploading a meme (figure 13). 
+
+
+```.py
+def add_meme():
+    if request.method == 'POST':
+            title = request.form['title']
+            image_url = request.form['image_url']
+            category_id = request.form['category_id']
+            
+            db = get_db()
+            db.execute('INSERT INTO meme (title, image_url, created_by, category_id) VALUES (?, ?, ?, ?)',
+                       (title, image_url, session['user_id'], category_id))
+            db.commit()
+            return redirect(url_for('home'))
+       
+        
+        return render_template('add_meme.html')
 ```
+
+
+Figure 13: The fields for adding a meme
+
+<img width="1507" alt="Screenshot 2024-05-31 at 9 05 29 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/3bb8cdb4-b84c-4d2d-b646-cd2e9e7a02b6">
+
+Once the meme is added to the database with its image URL it can be displayed on the home page or profile page using the image URL and html synatx below. It uses Jinja to call the variables `meme.category_name`, `meme.creator_name`, and using an image tag `<img>` displays the variable `meme.image_url` with the variable title `meme.title`. 
+
+```.html
+<p><strong>Category:</strong> {{ meme.category_name }}</p>
+        <p><strong>Created by:</strong> {{ meme.creator_name }}</p>
+        <img src="{{ meme.image_url }}" alt="{{ meme.title }}" width="300">
+```
+
 
 
 # Criteria D : Functionality 
