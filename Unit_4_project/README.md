@@ -499,17 +499,19 @@ Decomposition is the process of breaking down a problem or challenge – even a 
 Abstraction requires to focus only on the most important information and elements of the problem, and to ignore anything else, particularly irrelevant details or unnecessary details.[^10] Within my application the database connection function is abstracted into helper function(Reduce Redundency) `get_db` which connects to database. Also session management is broken down into helper functions that check if the user session ID is correct or redirected them to the login page.  
 
 ## Pattern Recognition
-Pattern Recognition is identifying similarities or patterns among smaller problems. This can help solve complex problems more efficiently by reusing solutions [^10].
-
+Pattern Recognition is identifying similarities or patterns among smaller problems. This can help solve complex problems more efficiently by reusing solutions [^10]. In my application the use of SQL queries to gather data about the user such as meme posted, comments, userid, and more are frequently reused in differant pages. Additionally using if statments to check the method REQUESTs and error handling or incorrectly entered forms is also reused. 
 
 ## Algorithm Design
-Algorithm Design involves creating a step-by-step procedure to solve a problem [^10]. 
+Algorithm Design involves creating a step-by-step procedure to solve a problem [^10]. In the application almost everyn function uses a step by step procedure. One of them is the login system which first collects username and password from the login form, next checks if the user exists and retrieve their stored password hash, next compare the entered password with the stored hash, then if the password is correct, store the user ID in the session, or redirect the user to the profile page or show an error message if authentication fails.
+
 
 # Criteria D : Functionality 
 
 
 https://youtu.be/0HS0uZ9COG8
 
+
+# Criteria E : Evaluation
 
 
 
