@@ -534,7 +534,9 @@ The user(client) was asked to use the application to complete these TEST CASES b
 | 11           | Upload Image      | 1. Navigate to the "Add Meme" page. 2. Fill in the meme details (title, category) and image URL. 3. Click "Add Meme" button.                                | Meme is created with the uploaded image and displayed on the home page.           | User was able to upload image. Struggled to get image url.                                                                          |
 
 ## BETA TESTING
-For be
+For beta testing multiple users were asked to test the product through the `Test Cases` then provide feed back about the application all of information is below.
+
+
 
 
 ### Citations
