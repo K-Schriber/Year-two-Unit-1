@@ -483,8 +483,8 @@ Figure 13: The fields for adding a meme
 Once the meme is added to the database with its image URL it can be displayed on the home page or profile page using the image URL and html synatx below. It uses Jinja to call the variables `meme.category_name`, `meme.creator_name`, and using an image tag `<img>` displays the variable `meme.image_url` with the variable title `meme.title`. 
 
 ```.html
-<p><strong>Category:</strong> {{ meme.category_name }}</p>
-        <p><strong>Created by:</strong> {{ meme.creator_name }}</p>
+<p><strong>Category:</strong> {{ meme.category_name }}</p> #tag <p> starts paragraph
+        <p><strong>Created by:</strong> {{ meme.creator_name }}</p> # tag <strong> makes it bold
         <img src="{{ meme.image_url }}" alt="{{ meme.title }}" width="300">
 ```
 
