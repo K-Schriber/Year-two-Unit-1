@@ -37,72 +37,6 @@ The pros of using a function is whenever you need to Query the data base you are
 # CSS Styling
 CSS (Cascade Style Sheet) styling allows you to have a standard format and presentation for the spacing of images/textboxs/headers/etc. In this project I utalized a premade template [^2]. 
 
-```.css
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 1em;
-    text-decoration: none;
-}
-
-main {
-    padding: 2em;
-}
-
-h2 {
-    color: #333;
-}
-
-form label {
-    display: block;
-    margin-top: 1em;
-}
-
-form input[type="text"],
-form input[type="password"] {
-    width: 100%;
-    padding: 0.5em;
-    margin-top: 0.5em;
-}
-
-form input[type="submit"] {
-    margin-top: 1em;
-    padding: 0.5em 2em;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 1em 0;
-}
-
-ul li img {
-    max-width: 100%;
-    height: auto;
-    grid-column: 1;
-  grid-row: 2 / 5;}
-```
-
 # Base HTML
 To maintain the same visual format within each page of the program the use of a html named base. This HTML file is the shell which all the other pages will be rendered from [^3]. In other words, it provides the same format for the header, depending if you're logged in the header will show login /register or Home/Add Meme/Logout/Profile.
 
@@ -165,13 +99,13 @@ Figure 3: User Cookie: User_id Cookie = 1
 <img width="451" alt="Screenshot 2024-05-27 at 8 39 02 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/f4b3a37a-1594-4310-92e3-e53a28560b43">
 
 # Flask App Routes
-App routes is the framework for mapping the url destincations to functions. Specficallyin `@app.route` is a decorator used to map URL paths (endpoints) to view functions. The mapping determines what function should be called when the a specfic URL is requested by the user [^9]. The `app.route` also defines the methods that are allowed for the root such as GET and POST requests. For each page within the application there is an app route. An example of an app route python code in this application is below  which takes the user to the specfic meme the user has clicked on. The url is formated by /meme/(the meme id in the database) and can be seen below Figure 3:  
+App routes is the framework for mapping the url destincations to functions. Specficallyin `@app.route` is a decorator used to map URL paths (endpoints) to view functions. The mapping determines what function should be called when the a specfic URL is requested by the user [^9]. The `app.route` also defines the methods that are allowed for the root such as GET and POST requests. For each page within the application there is an app route. An example of an app route python code in this application is below  which takes the user to the specfic meme the user has clicked on. The url is formated by /meme/(the meme id in the database) and can be seen below Figure 4:  
 
 ```.py
 @app.route('/meme/<int:meme_id>', methods=['GET', 'POST'])
 ```
 
-Figure 3: The url contains HTTP (Hypertext Transfer Protocol) which is used to communicate with the server. The next part of the URL is 127.0.0.1 which is the ip of the server address (THis id is special cause it's ran on a local server). The next section is the port where the server is waiting for requests in this case 5000 (Defeault port for flask development server). And finally, specific path to meme on the server (explained above).
+Figure 4: The url contains HTTP (Hypertext Transfer Protocol) which is used to communicate with the server. The next part of the URL is 127.0.0.1 which is the ip of the server address (THis id is special cause it's ran on a local server). The next section is the port where the server is waiting for requests in this case 5000 (Defeault port for flask development server). And finally, specific path to meme on the server (explained above).
 
 <img width="228" alt="Screenshot 2024-05-30 at 2 03 27 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/ad38050b-18a3-4dfd-914b-123cbbd6e29a">
 
@@ -180,7 +114,7 @@ I have created a login/registration system that allows users to each have there 
 
 
 ## Registration
-The first part of the process of the application is registering. To create the webserver page the url endpoint is called `/register`.  The following `registration` function allows new users to create an account by providing a username and password. When the user clicks submit it stores the user's entered information. This process of appending data to the database is a Post request in which data is saved to the server in this case the SQLLITE database. The program uses a try block to test if there are any errors in the entries and uses a except block to handle the error by returning the `sqlite3.IntegrityError`. The error is if the user already exists [^4]. The SQL query uses ? which is place holder for the values doing this changes the query into a parameterized query [^5]. In this type of query actual values are provided separately from the SQL statement itself this is done to prevent SQL Injections which is a web attack that uses malicious SQL code for backend database manipulation to access information that not intended to be displayed [^5]. Before the username and password are appended to the database the password is hashed for extra security. Hashing involves taking an input `password` and converting it into a fixed-size string of characters using a mathematical function. Figure 4: Registration page
+The first part of the process of the application is registering. To create the webserver page the url endpoint is called `/register`.  The following `registration` function allows new users to create an account by providing a username and password. When the user clicks submit it stores the user's entered information. This process of appending data to the database is a Post request in which data is saved to the server in this case the SQLLITE database. The program uses a try block to test if there are any errors in the entries and uses a except block to handle the error by returning the `sqlite3.IntegrityError`. The error is if the user already exists [^4]. The SQL query uses ? which is place holder for the values doing this changes the query into a parameterized query [^5]. In this type of query actual values are provided separately from the SQL statement itself this is done to prevent SQL Injections which is a web attack that uses malicious SQL code for backend database manipulation to access information that not intended to be displayed [^5]. Before the username and password are appended to the database the password is hashed for extra security. Hashing involves taking an input `password` and converting it into a fixed-size string of characters using a mathematical function. Figure 5: Registration page
 
 The code for the registration system is below. I have provided comments next to the code to provide better understanding
 
@@ -202,14 +136,14 @@ def register():
     return render_template('register.html', error=error) # If errors returns to register template 
 
 ```
-Figure 4: REGISTRATION PAGE
+Figure 5: REGISTRATION PAGE
 
 <img width="1511" alt="Screenshot 2024-05-27 at 9 10 54 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/39ec58c0-f0d0-4c51-832a-47b96d029751">
 
 ## Login 
-The login system works similary to the registration system except will only allow the user to login if there is an exsisting account. The login page asks the user to input username and password into two text boxes and has a submit button. Once the user clicks the submit button using an if statement if it sends a POST request. Then the username/password are saved in two variables and the the program connects to the database. The database then does a parameteraidsed query (Query for SQL injection prevention) to see if the username is located in the database. If it is then it checks if the provided password matches the hashed password stored in the database. If both match username/password match in database the users id is put into a session via `user_id` and the fucntion redirects the user to the home page. Else if they don't match the user is returned with an error. The HTML rendering of the login figure 5
+The login system works similary to the registration system except will only allow the user to login if there is an exsisting account. The login page asks the user to input username and password into two text boxes and has a submit button. Once the user clicks the submit button using an if statement if it sends a POST request. Then the username/password are saved in two variables and the the program connects to the database. The database then does a parameteraidsed query (Query for SQL injection prevention) to see if the username is located in the database. If it is then it checks if the provided password matches the hashed password stored in the database. If both match username/password match in database the users id is put into a session via `user_id` and the fucntion redirects the user to the home page. Else if they don't match the user is returned with an error. The HTML rendering of the login figure 6
 
-Figure 5: LOGIN PAGE
+Figure 6: LOGIN PAGE
 
 <img width="1501" alt="Screenshot 2024-05-27 at 9 08 58 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/f728564c-bf85-4fa4-80ab-8f7c8a5530f8">
 
@@ -236,7 +170,7 @@ def login():
 The user is able to edit, create, and review comments under memes. This allows multiple users to add input about the meme.
 
 ## Adding Comment
-The first part of the comments system is letting users be able to add comments. To add comments it uses a function called Meme details. The first step is connection to the database. Then it uses a if Statement to check if the the user has clicked the comments button and if it's a `POST` request. If it is it the users comment is saved into a variable called content and then a insert paramatized query is execute for three values `content`, `meme_id`, and `user_id`. After the values are commited (saved) to the table Comment the data bases closes and the meme.html is rendered.  A time stamp is also saved into the comments table to show when users made comments. However if the HTTP request is a `GET` request then the function gets the meme details along with all the associated comments. This first query fetches the details of a specific meme,  category name, and the username of its creator. The result is stored in the meme variable. The next query gets all comments associated with the specified meme and the username of each commenter. The results are stored in the `comments` variable. The meme detail HTML is then Rendered Figure 6. More details about the SQL queries are next to the code below.
+The first part of the comments system is letting users be able to add comments. To add comments it uses a function called Meme details. The first step is connection to the database. Then it uses a if Statement to check if the the user has clicked the comments button and if it's a `POST` request. If it is it the users comment is saved into a variable called content and then a insert paramatized query is execute for three values `content`, `meme_id`, and `user_id`. After the values are commited (saved) to the table Comment the data bases closes and the meme.html is rendered.  A time stamp is also saved into the comments table to show when users made comments. However if the HTTP request is a `GET` request then the function gets the meme details along with all the associated comments. This first query fetches the details of a specific meme,  category name, and the username of its creator. The result is stored in the meme variable. The next query gets all comments associated with the specified meme and the username of each commenter. The results are stored in the `comments` variable. The meme detail HTML is then Rendered Figure 7. More details about the SQL queries are next to the code below.
 
 ```.py
 @app.route('/meme/<int:meme_id>', methods=['GET', 'POST'])
@@ -268,12 +202,12 @@ def meme_detail(meme_id):
 ```
 
 
-Figure 6: Add Comment System : The Comments display the user who created it and the time it was added. It also shows other users comments on the post
+Figure 7: Add Comment System : The Comments display the user who created it and the time it was added. It also shows other users comments on the post
 
 <img width="483" alt="Screenshot 2024-05-29 at 9 32 13 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/e635ec8c-c307-4221-8465-5767b988f6df">
 
 ## Deleting Comment
-The second part of the comment system is being able to the delete commements that the user has posted. Using a function called `delete_comment` the first process is connecting to the database then from using and paratized query to select the comment_id from the comments table. Using an if statement the program checks if the comment_id saved in the variable `comment` is eqaul to the `user_Id` of the session. If it is the comment is deleted from the comment table and the meme_detail page is rendered again. On the screen the user sees a delete button next to all there comments Figure 7:
+The second part of the comment system is being able to the delete commements that the user has posted. Using a function called `delete_comment` the first process is connecting to the database then from using and paratized query to select the comment_id from the comments table. Using an if statement the program checks if the comment_id saved in the variable `comment` is eqaul to the `user_Id` of the session. If it is the comment is deleted from the comment table and the meme_detail page is rendered again. On the screen the user sees a delete button next to all there comments Figure 8:
 
 ```.py
 @app.route('/delete_comment/<int:comment_id>', methods=['POST'])
@@ -286,12 +220,12 @@ def delete_comment(comment_id):
         db.commit()
     return redirect(url_for('meme_detail', meme_id=comment['meme_id']))
 ```
-Figure 7: Delete Comment button to delete comments from user
+Figure 8: Delete Comment button to delete comments from user
 
 <img width="395" alt="Screenshot 2024-05-29 at 9 55 10 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/d2a1ba31-bdd9-45b4-a58a-e2aa7d686928">
 
 ## Editing Comment
-The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it Figure 8. To make sure users can only edit there own comment I utalize and If statement that checks if there is no comments or if the Comment_user_id is eqaul to the session ID in one of the equirments are met it returns to home page. The next if statment checks if the User sends a POST request to the program [^7]. If so the function updates the `comment` in the comment table with the updates and redirects the user back to the meme detail page. Else if it is a GET request then the the function and renders the html page for editing the comment Figure 9.
+The final part of the comments system is the editing comments which allows users to edit posted comments changing the contents of it Figure 9. To make sure users can only edit there own comment I utalize and If statement that checks if there is no comments or if the Comment_user_id is eqaul to the session ID in one of the equirments are met it returns to home page. The next if statment checks if the User sends a POST request to the program [^7]. If so the function updates the `comment` in the comment table with the updates and redirects the user back to the meme detail page. Else if it is a GET request then the the function and renders the html page for editing the comment Figure 10.
 ```.py
 def edit_comment(comment_id):
   
@@ -321,16 +255,16 @@ The editing HTML that is rendered allows the user to edit the comment. And chang
     <button type="submit">Update Comment</button>
 </form>
 ```
-Figure 8: The user is prompted in the Specfic meme page The choice to edit
+Figure 9: The user is prompted in the Specfic meme page The choice to edit
 
 <img width="412" alt="Screenshot 2024-05-29 at 2 54 12 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/549fc312-b3b6-4e12-a5fe-6553a20bd776">
 
-Figure 9: The user can edit the comment. Once they click Update sends POST request to the function edit comment.
+Figure 10: The user can edit the comment. Once they click Update sends POST request to the function edit comment.
 
 <img width="267" alt="Screenshot 2024-05-29 at 2 54 18 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/62616293-32c8-43b8-a48e-fd913e143c33">
 
 # Succes Criteria 3: A system to add/remove likes
-The application must have a way for users to like and unlike posts so users can tell what is popular and what is not. The like system works similiarly to the comment system. First connects to database then does a parmaterized query in the `like table` to check if the user has liked the meme based on the `meme_id` and the `user_id`. If there is no like that exists in the table then the program queries to insert a new like into the `like table`. If there is a like that exists in the table then the application uses a delete paramaterized query to delete the like. The meme detail HDML is then rendered.(Python Code) The meme_detail HDML (see HDML below) uses JINJA such as calling for the `like count`, which is a seperate function that uses a count querie through the like table to count the amount of likes. This is also seen when the the liking the meme creates a POST request utalizing jinja to get the URL. Following that the Jinja is used to rename the button if the user wishes to like (figure 10) or if they want to unlike (figure 11).  
+The application must have a way for users to like and unlike posts so users can tell what is popular and what is not. The like system works similiarly to the comment system. First connects to database then does a parmaterized query in the `like table` to check if the user has liked the meme based on the `meme_id` and the `user_id`. If there is no like that exists in the table then the program queries to insert a new like into the `like table`. If there is a like that exists in the table then the application uses a delete paramaterized query to delete the like. The meme detail HDML is then rendered.(Python Code) The meme_detail HDML (see HDML below) uses JINJA such as calling for the `like count`, which is a seperate function that uses a count querie through the like table to count the amount of likes. This is also seen when the the liking the meme creates a POST request utalizing jinja to get the URL. Following that the Jinja is used to rename the button if the user wishes to like (figure 11) or if they want to unlike (figure 12).  
 
 ## Python code
 ```.py
@@ -352,11 +286,11 @@ def like_meme(meme_id):
 </form>
 ```
 
-Figure 10: The user can like the post
+Figure 11: The user can like the post
 
 <img width="341" alt="Screenshot 2024-05-29 at 7 56 30 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/55b64e40-297f-48ed-8e05-f483782f73bb">
 
-Figure 11: The user can unlike the post
+Figure 12: The user can unlike the post
 
 <img width="313" alt="Screenshot 2024-05-29 at 7 56 38 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/964886f6-002b-4377-9eaa-49cc3ea9b4f3">
 
@@ -409,7 +343,7 @@ if followed_categories:
 
 This if statment above takes all the memes under the catergories the user follows
 
-Part of the home HTML is below which utalizes Jinja to use for loops and if statements to check if the user follows the categories. If they do the next for loop look goes through the memes of the SQL query above and displays all memes of the catergory the user follows showing the Meme detail link, caterogy its under, and the meme creator name Figure(10). Helpfel comments on the side of the HTML syntax to better understand the processs
+Part of the home HTML is below which utalizes Jinja to use for loops and if statements to check if the user follows the categories. If they do the next for loop look goes through the memes of the SQL query above and displays all memes of the catergory the user follows showing the Meme detail link, caterogy its under, and the meme creator name Figure(13). Helpful comments on the side of the HTML syntax to better understand the processs
 
 ```.html
 {% for category in categories %} #goes through categories user follow
@@ -435,28 +369,39 @@ Part of the home HTML is below which utalizes Jinja to use for loops and if stat
     </li>
     {% endfor %}
 ```
-Figure 10: The home menu. Options for users to follow categories and shows memes.
+Figure 13: The home menu. Options for users to follow categories and shows memes.
 
 <img width="561" alt="Screenshot 2024-05-31 at 8 24 20 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/ca73ba6c-1198-4e6d-a341-1f6c4c01810b">
 
 # Succes Criteria 5: The application for the Meme Reddit has a profile page with relevant information
 
- I have created the profile page so when users click the page they get all the relevent informatuion related to their account. The profile page shows the Username, the memes created, the comments made, and the categories the user follows Figure 11, figure 12. This is done through multiple SQL queries that select all the Memes, comments, and categories based session `user_id` and then display . 
+ I have created the profile page so when users click the page they get all the relevent informatuion related to their account. The profile page shows the Username, the memes created, the comments made, and the categories the user follows Figure 14, figure 15. This is done through multiple SQL queries that select all the Memes, comments, and categories based session `user_id` and then display . One of the many similiar sql queries is below with comments next to it to provide a better understanding. The qqueries all select 
+
+ ```.py
+user = db.execute('SELECT * FROM user WHERE id = ?', (user_id,)).fetchone() # Fetch user details * selects all the collums 
+
+memes = db.execute('SELECT * FROM meme WHERE created_by = ?', (user_id,)).fetchall() # Fetch memes created by the user based on user id * selects all the collums where userid matches with session id
+
+comments = db.execute('SELECT comment.*, meme.title as meme_title FROM comment '
+                      'JOIN meme ON comment.meme_id = meme.id WHERE comment.user_id = ?', (user_id,)).fetchall() # Fetch comments made by the user * selects all the collums 
+```
+
+ 
 
 
-Figure 11: Shows the username and the memes the user has uploaded
+Figure 14: Shows the username and the memes the user has uploaded
 
 <img width="565" alt="Screenshot 2024-05-31 at 8 42 14 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/8ccf790d-70d7-40f4-bac7-c228c6a43389">
 
 
-Figure 12: Shows the comments made on posts and the categories the user follows
+Figure 15: Shows the comments made on posts and the categories the user follows
 
 <img width="525" alt="Screenshot 2024-05-31 at 8 42 19 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/5eab1e16-082c-4b3e-b3af-6c9b3f6041b4">
 
 
 # Succes Criteria 6: The application for the Meme Reddit allows users to upload images
 
-The final criteria is the ability for the user to upload memes to the meme reddit. This done through the `add_meme` function. The function only works if the user clicks the submit button sending a POST request and submits the fields required which are the title of the meme, Image Url of the meme, and the category field it falls under. The page that is rendered is what the user sees this when uploading a meme (figure 13). 
+The final criteria is the ability for the user to upload memes to the meme reddit. This done through the `add_meme` function. The function only works if the user clicks the submit button sending a POST request and submits the fields required which are the title of the meme, Image Url of the meme, and the category field it falls under. The page that is rendered is what the user sees this when uploading a meme (figure 16). 
 
 
 ```.py
@@ -477,7 +422,7 @@ def add_meme():
 ```
 
 
-Figure 13: The fields for adding a meme
+Figure 16: The fields for adding a meme
 
 <img width="1507" alt="Screenshot 2024-05-31 at 9 05 29 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/3bb8cdb4-b84c-4d2d-b646-cd2e9e7a02b6">
 
