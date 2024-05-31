@@ -10,6 +10,7 @@
 - Variables
 - Functions
 - Token/ Sessions
+- Hashing
 
 
 # Memes database
