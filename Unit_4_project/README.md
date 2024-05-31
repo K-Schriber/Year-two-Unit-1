@@ -516,7 +516,7 @@ https://youtu.be/0HS0uZ9COG8
 The application will be elvaluated via two types of software testing. First End-User Testing, which allows end product users to use the application. And Beta Testing which a group of external users test an app before its official launch. 
 
 ## END USER TESTING
-The user was asked to use the application to complete these TEST CASES below. The result are in the table below.
+The user(client) was asked to use the application to complete these TEST CASES below. The result are in the table below.
 
 |              |                   |                                                                                                                                                             |                                                                                   |                                                                                                                                     |
 |--------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -534,7 +534,7 @@ The user was asked to use the application to complete these TEST CASES below. Th
 | 11           | Upload Image      | 1. Navigate to the "Add Meme" page. 2. Fill in the meme details (title, category) and image URL. 3. Click "Add Meme" button.                                | Meme is created with the uploaded image and displayed on the home page.           | User was able to upload image. Struggled to get image url.                                                                          |
 
 ## BETA TESTING
-
+For be
 
 
 ### Citations
