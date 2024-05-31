@@ -1,4 +1,4 @@
-<img width="1510" alt="Screenshot 2024-05-31 at 9 05 02 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/6c1103c4-7e53-48ac-8cca-b0b1e60fdcbd"># Criteria C : Documenting the development
+# Criteria C : Documenting the development
 
 ## List of techniques used
 - Flask Library/Routes
