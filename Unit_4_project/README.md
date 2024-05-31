@@ -38,7 +38,7 @@ The pros of using a function is whenever you need to Query the data base you are
 CSS (Cascade Style Sheet) styling allows you to have a standard format and presentation for the spacing of images/textboxs/headers/etc. In this project I utalized a premade template [^2]. 
 
 # Base HTML
-To maintain the same visual format within each page of the program the use of a html named base. This HTML file is the shell which all the other pages will be rendered from [^3]. In other words, it provides the same format for the header, depending if you're logged in the header will show login /register or Home/Add Meme/Logout/Profile.
+To maintain the same visual format within each page of the program the use of a html named base. This HTML file is the shell which all the other pages will be rendered from [^3]. In other words, it provides the same format for the header, depending if you're logged in the header will show login /register or Home/Add Meme/Logout/Profile. Within the base HTML Jinja is to give the url hyper links and for a if statement that if the user is logged in then only certain headers will appear.
 
 Fig 1: LOGGED IN
 
@@ -60,11 +60,11 @@ Fig 2: LOGGED OUT
 <body>
     <header>
         <h1>Meme Manager</h1>
-        {% if session.user_id %}
+        {% if session.user_id %} 
         <nav>
-            <a href="{{ url_for('home') }}">Home</a>
-            <a href="{{ url_for('manage_memes') }}">Add Meme</a>
-            <a href="{{ url_for('logout') }}">Logout</a>
+            <a href="{{ url_for('home') }}">Home</a> # Top headers for the each page
+            <a href="{{ url_for('manage_memes') }}">Add Meme</a> # Top headers for the each page
+            <a href="{{ url_for('logout') }}">Logout</a> # Top headers for the each page
             <a href="{{ url_for('profile') }}">Profile</a>
         </nav>
 
