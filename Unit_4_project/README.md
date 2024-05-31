@@ -141,7 +141,7 @@ Fig 2: LOGGED OUT
         {% endif %}
     </header>
     <main>
-        {% block content %}{% endblock %}
+        
     </main>
 </body>
 </html>
@@ -489,6 +489,21 @@ Once the meme is added to the database with its image URL it can be displayed on
 ```
 
 
+# Computational Thinking
+Computational Thinking is a problem-solving technique requires programmers to break down complex problems and scenarios into bite size pieces that can be fully understood in order to then develop solutions that are clear to both computers and humans [^10]. This is done through Decomposition, Abstraction, Pattern Recognition, and Algorithm Design. 
+
+## Decomposistion
+Decomposition is the process of breaking down a problem or challenge – even a complex one – into small, manageable parts [^10]. This is done throughout my application via routes. Each route handles a specfic part of the functionaliy. For example home route displays the home page with memes or the profile page displays the users profile. Additionally, each HTML is organised via a template base which allows for easier to manage the presentation of the page.
+
+## Abstraction
+Abstraction requires to focus only on the most important information and elements of the problem, and to ignore anything else, particularly irrelevant details or unnecessary details.[^10] Within my application the database connection function is abstracted into helper function(Reduce Redundency) `get_db` which connects to database. Also session management is broken down into helper functions that check if the user session ID is correct or redirected them to the login page.  
+
+## Pattern Recognition
+Pattern Recognition is identifying similarities or patterns among smaller problems. This can help solve complex problems more efficiently by reusing solutions [^10].
+
+
+## Algorithm Design
+Algorithm Design involves creating a step-by-step procedure to solve a problem [^10]. 
 
 # Criteria D : Functionality 
 
@@ -509,6 +524,7 @@ https://youtu.be/0HS0uZ9COG8
 [^7]:“Edit Blog Posts - Flask Fridays #20.” YouTube, YouTube, 2 July 2021, www.youtube.com/watch?v=N4Nz0cYuCnc. 
 [^8]:Python, Real. “Jinja Templating (Overview).” Real Python, realpython.com/lessons/jinja-templating-overview/#:~:text=Jinja%20is%20a%20text%20templating,together%20using%20inheritance%20and%20inclusion. Accessed 29 May 2024. 
 [^9]:“Flask App Routing.” GeeksforGeeks, GeeksforGeeks, 10 Mar. 2023, www.geeksforgeeks.org/flask-app-routing/. 
+[^10]: Brooks, Ruth. “What Is Computational Thinking?” University of York, Ruth Brooks /wp-content/uploads/2018/08/yorklogo.svg, 17 Aug. 2023, online.york.ac.uk/what-is-computational-thinking/#:~:text=Computational%20thinking%20(CT)%20is%20a,writing%20computer%20programmes%20and%20algorithms. 
 
 
 
