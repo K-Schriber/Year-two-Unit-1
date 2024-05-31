@@ -426,7 +426,14 @@ Figure 16: The fields for adding a meme
 
 <img width="1507" alt="Screenshot 2024-05-31 at 9 05 29 AM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/3bb8cdb4-b84c-4d2d-b646-cd2e9e7a02b6">
 
-Once the meme is added to the database with its image URL it can be displayed on the home page or profile page using the image URL and html synatx below. It uses Jinja to call the variables `meme.category_name`, `meme.creator_name`, and using an image tag `<img>` displays the variable `meme.image_url` with the variable title `meme.title`. 
+Once the meme is added to the database with its image URL it can be displayed on the home page or profile page using the image URL and html synatx below. It uses Jinja to call the variables `meme.category_name`, `meme.creator_name`, and using an image tag `<img>` displays the variable `meme.image_url` with the variable title `meme.title`.  The rendered home page with memes is below (figure 17).
+
+
+Figure 17: The rendered home page with memes
+
+<img width="929" alt="Screenshot 2024-05-31 at 1 35 24 PM" src="https://github.com/K-Schriber/Unit-4-Comp-Sci/assets/142757998/098f27bf-00a5-46fc-a0ba-299670e9dfcf">
+
+
 
 ```.html
 <p><strong>Category:</strong> {{ meme.category_name }}</p> #tag <p> starts paragraph
