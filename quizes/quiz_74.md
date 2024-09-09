@@ -8,5 +8,8 @@
 
 # 1.Solution
 
+<img width="436" alt="Screenshot 2024-09-09 at 9 20 48 PM" src="https://github.com/user-attachments/assets/3cb9bf6e-68ce-4977-9135-40c4c4d66627">
+
 
 # 2.Proof of work
+<img width="202" alt="Screenshot 2024-09-09 at 9 20 52 PM" src="https://github.com/user-attachments/assets/1ccd836e-d83f-4da7-9ebd-44364ec566b1">
