@@ -12,3 +12,4 @@
 
 
 # 2.Proof of work
+<img width="232" alt="Screenshot 2024-09-11 at 7 40 04 PM" src="https://github.com/user-attachments/assets/8a1365e1-5fa8-4a23-999e-0c61becf8f00">
