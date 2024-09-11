@@ -9,5 +9,7 @@
 
 # 1.Solution
 
+<img width="274" alt="Screenshot 2024-09-11 at 7 44 25 PM" src="https://github.com/user-attachments/assets/b3d509d4-5760-4806-a6d6-c3fe73d7b32f">
 
 # 2.Proof of work
+<img width="103" alt="Screenshot 2024-09-11 at 7 44 29 PM" src="https://github.com/user-attachments/assets/7d324fe2-c219-43e7-9424-1c42594e1a2b">
